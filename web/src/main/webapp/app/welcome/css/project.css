@@ -1,0 +1,14 @@
+footer {
+    width: 100%;
+    background: #336699;
+    float: left;
+    margin: 0 0 .5% 0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #202020
+}
+.banner{
+
+}
+.hello {
+    text-decoration-color: #202020;
+}
