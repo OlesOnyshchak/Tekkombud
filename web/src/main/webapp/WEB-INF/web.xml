@@ -7,6 +7,6 @@
     <display-name>Buildings and environment engineering</display-name>
 
     <welcome-file-list>
-        <welcome-file>/app/welcome/index.html</welcome-file>
+        <welcome-file>/app/welcome/start.html</welcome-file>
     </welcome-file-list>
 </web-app>

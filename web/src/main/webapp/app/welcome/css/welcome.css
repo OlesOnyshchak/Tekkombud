@@ -1,0 +1,14 @@
+.banner{
+    width: 100%;
+    height: 700px;
+}
+.footer{
+    padding: 14px;
+    background: black;
+    color:#fff;
+}
+.text-white {color: #fff;}
+
+.center .navbar-inner {
+    text-align:center;
+}
