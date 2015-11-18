@@ -5,6 +5,7 @@ $(document).ready(function(){
 var images = [], x = -1;
 images[0] = "app/welcome/photo/banner1.jpg";
 images[1] = "app/welcome/photo/banner2.jpg";
+images[2] = "app/welcome/photo/banner.jpg";
 
 function displayNextImage() {
     x = (x === images.length - 1) ? 0 : x + 1;
