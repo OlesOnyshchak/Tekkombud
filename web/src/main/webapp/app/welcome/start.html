@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tekkombud</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app/welcome/css/welcome.css">
+    <script src="app/welcome/js/jquery.js"></script>
+</head>
+
+<body>
+<div class="navigation">
+    <div class=" navbar navbar-inverse navbar-fixed-top">
+        <ul class="nav nav-pills navbar-right">
+            <li><a href="#/home" class="text-white">Home</a></li>
+            <li><a href="#/about" class="text-white">About</a></li>
+            <li><a href="#/whatwedo" class="text-white">What we do</a></li>
+            <li><a href="#/vacancy" class="text-white">Vacancy</a></li>
+            <li><a href="#/login" class="text-white">log in</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="banner">
+    <div onload="startTimer()">
+        <img id="img" src="app/welcome/photo/banner.jpg"/>
+
+        <div class="wrapper">
+            <button type="button" onclick="displayPreviousImage()">Previous</button>
+            <button type="button" onclick="displayNextImage()">Next</button>
+        </div>
+    </div>
+    <div class="bx-pager bx-default-pager">
+        <div class="bx-pager-item">
+            <a hred data-slide-index=1 class="bx-pager-link"></a>
+        </div>
+        hy
+    </div>
+
+    <div class="bx-controls bx-has-pager bx-has-controls-direction" id='dafault_pager'>
+        <div class="wrapper">
+            <div class="bx-pager bx-default-pager">
+                <a class="bx-pager-link" onclick="displayPreviousImage()" data-slide-index="0" href=""><img src="app/welcome/photo/banner1.jpg"
+                                                                           width="50" height="50"></a>
+                <a class="bx-pager-link" data-slide-index="1" href=""><img src="app/welcome/photo/banner2.jpg"
+                                                                           width="50" height="50"></a>
+                <a class="rsImg" data-slide-index="2" href=""></a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<script src="app/welcome/js/welcome.js"></script>
+
+<div class="navigation">
+    <div class=" navbar navbar-inverse navbar-fixed-bottom">
+        <div class="text-white text-center">&copy; Copyright 2015</div>
+    </div>
+</div>
+
+</body>
+</html>`
