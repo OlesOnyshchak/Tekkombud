@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <title>Tekkombud</title>
+    <script src="app/welcome/js/jquery.js"></script>
+    <link rel="stylesheet" href="app/welcome/css/welcome.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script type="text/javascript" src="app/js/bower-components/angular/angular.min.js"></script>
+    <script type="text/javascript"
+            src="app/js/bower-components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+</head>
+
+<body>
+
+<div class="navigation">
+    <div class=" navbar navbar-inverse navbar-fixed-top">
+        <ul class="nav nav-pills navbar-right">
+            <li><a href="#/home" class="text-white">Home</a></li>
+            <li><a href="#/about" class="text-white">About</a></li>
+            <li><a href="#/whatwedo" class="text-white">What we do</a></li>
+            <li><a href="#/vacancy" class="text-white">Vacancy</a></li>
+            <li><a href="#/login" class="text-white">log in</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <img id="img" src="app/welcome/photo/banner1.jpg"/>
+
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators ">
+                <li class="active" onclick="display(0)"></li>
+                <li onclick="display(1)"></li>
+                <li onclick="display(2)"></li>
+            </ol>
+        </div>
+        <div class="wrapper">
+            <div ui-view="modal" autoscroll="true"></div>
+        </div>
+    </div>
+</div>
+
+<div class="navigation">
+    <div class=" navbar navbar-inverse navbar-fixed-bottom">
+        <div class="text-white text-center">&copy; Copyright 2015</div>
+    </div>
+</div>
+
+<script src="app/welcome/js/welcome.js"></script>
+</body>
+</html>`
