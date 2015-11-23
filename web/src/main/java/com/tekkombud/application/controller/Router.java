@@ -10,4 +10,9 @@ public class Router {
     public String showWelcomePage() {
         return "/app/start.html";
     }
+
+  /*  @RequestMapping(value = {"/admin"},method = RequestMethod.GET)
+    public String showAdminPage() {
+        return "/app/index.html";
+    }*/
 }

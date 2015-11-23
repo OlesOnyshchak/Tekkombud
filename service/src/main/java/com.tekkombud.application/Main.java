@@ -2,10 +2,9 @@ package com.tekkombud.application;
 
 
 import com.tekkombud.application.config.PersistenceConfig;
-import com.tekkombud.application.dao.CRUDRepository;
 import com.tekkombud.application.entity.User;
 import com.tekkombud.application.entity.util.Status;
-import com.tekkombud.application.service.User.UserService;
+import com.tekkombud.application.service.UserService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

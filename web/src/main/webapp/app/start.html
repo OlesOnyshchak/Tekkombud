@@ -5,11 +5,18 @@
     <script src="app/welcome/js/jquery.js"></script>
     <link rel="stylesheet" href="app/welcome/css/welcome.css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <script type="text/javascript" src="app/js/bower-components/angular/angular.min.js"></script>
-    <script type="text/javascript"
-            src="app/js/bower-components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="app/dependency/bower-components/angular/angular.js"></script>
+
     <script type="text/javascript" src="app/app.js"></script>
+
+    <script src="app/welcome/controller/welcome-controller.js"></script>
+    <script src="app/welcome/service/welcome-service.js"></script>
+
+    <script src="app/dependency/bower-components/angular-route/angular-route.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script type="text/javascript" src="app/dependency/bower-components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
 </head>
 
 <body>
@@ -42,6 +49,14 @@
             <div ui-view="modal" autoscroll="true"></div>
         </div>
     </div>
+
+    <div class="row" ng-controller="WelcomeController">
+        <p></p>
+        <input value="login" ng-model="loginInfo.name">{{ loginInfo.name }}
+        <input value="password" ng-model="loginInfo.password">
+        <button value="submit" class="btn btn-success" ng-click="saveUser(loginInfo)"></button>
+    </div>
+
 </div>
 
 <div class="navigation">

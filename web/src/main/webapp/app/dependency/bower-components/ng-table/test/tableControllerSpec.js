@@ -4,19 +4,19 @@ describe('ngTableParams', function () {
         {name: "Tiancum", age: 43, role: 'Administrator'},
         {name: "Jacob", age: 27, role: 'Administrator'},
         {name: "Nephi", age: 29, role: 'Moderator'},
-        {name: "Enos", age: 34, role: 'User'},
-        {name: "Tiancum", age: 43, role: 'User'},
-        {name: "Jacob", age: 27, role: 'User'},
+        {name: "Enos", age: 34, role: 'user'},
+        {name: "Tiancum", age: 43, role: 'user'},
+        {name: "Jacob", age: 27, role: 'user'},
         {name: "Nephi", age: 29, role: 'Moderator'},
-        {name: "Enos", age: 34, role: 'User'},
+        {name: "Enos", age: 34, role: 'user'},
         {name: "Tiancum", age: 43, role: 'Moderator'},
-        {name: "Jacob", age: 27, role: 'User'},
-        {name: "Nephi", age: 29, role: 'User'},
+        {name: "Jacob", age: 27, role: 'user'},
+        {name: "Nephi", age: 29, role: 'user'},
         {name: "Enos", age: 34, role: 'Moderator'},
-        {name: "Tiancum", age: 43, role: 'User'},
-        {name: "Jacob", age: 27, role: 'User'},
-        {name: "Nephi", age: 29, role: 'User'},
-        {name: "Enos", age: 34, role: 'User'}
+        {name: "Tiancum", age: 43, role: 'user'},
+        {name: "Jacob", age: 27, role: 'user'},
+        {name: "Nephi", age: 29, role: 'user'},
+        {name: "Enos", age: 34, role: 'user'}
     ];
     beforeEach(module('ngTable'));
 
