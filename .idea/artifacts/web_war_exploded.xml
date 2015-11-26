@@ -29,8 +29,6 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.0.3.RELEASE" />
           <element id="library" level="project" name="Maven: postgresql:postgresql:9.1-901-1.jdbc4" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.6" />
-          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:4.0.3.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.2.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.0.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.0.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.0.3.RELEASE" />
@@ -44,6 +42,10 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.5.3" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:4.0.3.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:4.0.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.2.2.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:4.0.3.RELEASE" />
+          <element id="library" level="project" name="Maven: com.allanditzel:spring-security-csrf-token-filter:1.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
