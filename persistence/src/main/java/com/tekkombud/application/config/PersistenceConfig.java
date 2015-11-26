@@ -19,7 +19,6 @@ import java.util.Map;
 
 @Configuration
 @EnableTransactionManagement
-
 @PropertySource("classpath:application.properties")
 @ComponentScan(basePackages = "com.tekkombud.application")
 public class PersistenceConfig {

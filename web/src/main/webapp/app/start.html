@@ -21,7 +21,7 @@
 
 <body>
 
-<div class="navigation">
+<!--<div class="navigation">
     <div class=" navbar navbar-inverse navbar-fixed-top">
         <ul class="nav nav-pills navbar-right">
             <li><a href="#/home" class="text-white">Home</a></li>
@@ -31,14 +31,21 @@
             <li><a href="#/login" class="text-white">log in</a></li>
         </ul>
     </div>
-</div>
+</div>-->
 
 
 <div class="container-fluid">
     <div class="row">
-        <img id="img" src="app/welcome/photo/banner1.jpg"/>
 
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <div class="row" ng-controller="WelcomeController">
+            <p></p>
+            <input value="login" ng-model="loginInfo.name">{{ loginInfo.name }}
+            <input value="password" ng-model="loginInfo.password">
+            <button value="submit" class="btn btn-success" ng-click="saveUser(loginInfo)"></button>
+        </div>
+        <!--<img id="img" src="app/welcome/photo/banner1.jpg"/>-->
+
+     <!--   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators ">
                 <li class="active" onclick="display(0)"></li>
                 <li onclick="display(1)"></li>
@@ -47,16 +54,8 @@
         </div>
         <div class="wrapper">
             <div ui-view="modal" autoscroll="true"></div>
-        </div>
+        </div>-->
     </div>
-
-    <div class="row" ng-controller="WelcomeController">
-        <p></p>
-        <input value="login" ng-model="loginInfo.name">{{ loginInfo.name }}
-        <input value="password" ng-model="loginInfo.password">
-        <button value="submit" class="btn btn-success" ng-click="saveUser(loginInfo)"></button>
-    </div>
-
 </div>
 
 <div class="navigation">
