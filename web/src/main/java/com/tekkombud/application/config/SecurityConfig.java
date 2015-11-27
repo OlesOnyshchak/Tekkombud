@@ -3,7 +3,9 @@ package com.tekkombud.application.config;
 import com.allanditzel.springframework.security.web.csrf.CsrfTokenResponseHeaderBindingFilter;
 import com.tekkombud.application.service.user.SecurityUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -16,13 +18,11 @@ import javax.activation.DataSource;
 
 @Configuration
 @EnableWebSecurity
+@Import(ServiceConfig.class)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private SecurityUserDetailsService securityUserDetailsService;
-
-    @Autowired
-    DataSource dataSource;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
