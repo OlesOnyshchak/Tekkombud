@@ -10,6 +10,7 @@
     <script type="text/javascript" src="app/app.js"></script>
 
     <script src="app/welcome/controller/welcome-controller.js"></script>
+    <script src="app/welcome/controller/login-controller.js"></script>
     <script src="app/welcome/service/welcome-service.js"></script>
 
     <script src="app/dependency/bower-components/angular-route/angular-route.js"></script>
@@ -42,6 +43,13 @@
             <input value="login" ng-model="loginInfo.name">{{ loginInfo.name }}
             <input value="password" ng-model="loginInfo.password">
             <button value="submit" class="btn btn-success" ng-click="saveUser(loginInfo)"></button>
+        </div>
+        hello
+        <div class="row" ng-controller="LoginController">
+            <p></p>
+            <input value="login" ng-model="login.username">{{ loginInfo.name }}
+            <input value="password" ng-model="login.password">
+            <button value="submit" class="btn btn-success" ng-click="login()"></button>
         </div>
         <!--<img id="img" src="app/welcome/photo/banner1.jpg"/>-->
 

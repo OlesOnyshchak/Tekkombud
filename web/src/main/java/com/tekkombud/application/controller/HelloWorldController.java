@@ -25,6 +25,6 @@ public class HelloWorldController {
         }
         System.out.println("**************************");
 
-        return "helloworld";
+        return "/app/index.html";
     }
 }

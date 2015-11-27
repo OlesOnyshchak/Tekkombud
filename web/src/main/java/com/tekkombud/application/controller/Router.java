@@ -11,8 +11,13 @@ public class Router {
         return "/app/start.html";
     }
 
-  /*  @RequestMapping(value = {"/admin"},method = RequestMethod.GET)
-    public String showAdminPage() {
-        return "/app/index.html";
-    }*/
+    @RequestMapping(value = "/admin", method = RequestMethod.GET)
+    public String admin() {
+        return "/app/admin/index.html";
+    }
+
+    @RequestMapping(value = "/employee", method = RequestMethod.GET)
+    public String provider() {
+        return "/app/employee/index.html";
+    }
 }
