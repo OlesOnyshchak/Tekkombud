@@ -18,7 +18,7 @@ import javax.activation.DataSource;
 
 @Configuration
 @EnableWebSecurity
-@Import(ServiceConfig.class)
+@Import(WebConfig.class)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
