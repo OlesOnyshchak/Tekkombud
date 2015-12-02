@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class Router {
-    @RequestMapping(value = {"/welcome"},method = RequestMethod.GET)
+    @RequestMapping(value = {"/"},method = RequestMethod.GET)
     public String showWelcomePage() {
         return "/app/start.html";
     }
@@ -20,4 +20,5 @@ public class Router {
     public String provider() {
         return "/app/employee/index.html";
     }
+
 }

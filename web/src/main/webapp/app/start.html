@@ -35,21 +35,20 @@
 </div>-->
 
 
-<div class="container-fluid">
+<div class="container">
     <div class="row">
 
         <div class="row" ng-controller="WelcomeController">
             <p></p>
-            <input value="login" ng-model="loginInfo.name">{{ loginInfo.name }}
-            <input value="password" ng-model="loginInfo.password">
-            <button value="submit" class="btn btn-success" ng-click="saveUser(loginInfo)"></button>
+            <input value="login" ng-model="loginInf.name">{{ loginInf.name }}
+            <input value="password" ng-model="loginInf.password">
+            <button value="submit" class="btn btn-success" ng-click="saveUser(loginInf)"></button>
         </div>
-        hello
+        LOGIN
         <div class="row" ng-controller="LoginController">
-            <p></p>
             <input value="login" ng-model="login.username">{{ loginInfo.name }}
             <input value="password" ng-model="login.password">
-            <button value="submit" class="btn btn-success" ng-click="login()"></button>
+            <button type="button" class="btn btn-success" ng-click="login()"></button>
         </div>
         <!--<img id="img" src="app/welcome/photo/banner1.jpg"/>-->
 

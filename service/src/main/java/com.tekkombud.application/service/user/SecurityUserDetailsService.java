@@ -56,10 +56,9 @@ public class SecurityUserDetailsService extends JdbcDaoImpl {
         return customUserDetails;
     }
 
-    /**
-     * Provide additional information about company(organization) where user
-     * works except SYS_ADMIN role.
-     */
+
+
+
     public static class CustomUserDetails extends org.springframework.security.core.userdetails.User {
 
         public void setAuthorities(List<GrantedAuthority> authorities) {

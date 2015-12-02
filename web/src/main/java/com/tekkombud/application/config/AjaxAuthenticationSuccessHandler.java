@@ -10,9 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Iterator;
 
-/**
- * Created by Oles Onyshchak on 11/26/2015.
- */
 public class AjaxAuthenticationSuccessHandler  implements AuthenticationSuccessHandler {
     private AuthenticationSuccessHandler defaultHandler;
 

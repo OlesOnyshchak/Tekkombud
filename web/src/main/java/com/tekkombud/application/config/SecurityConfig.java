@@ -3,22 +3,18 @@ package com.tekkombud.application.config;
 import com.allanditzel.springframework.security.web.csrf.CsrfTokenResponseHeaderBindingFilter;
 import com.tekkombud.application.service.user.SecurityUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
 import org.springframework.security.web.csrf.CsrfFilter;
 
-import javax.activation.DataSource;
-
 @Configuration
 @EnableWebSecurity
-@Import(WebConfig.class)
+@Import(ServiceConfig.class)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
@@ -26,7 +22,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(securityUserDetailsService).passwordEncoder(new BCryptPasswordEncoder());
+        auth.userDetailsService(securityUserDetailsService);
     }
 
     @Override
@@ -39,23 +35,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/admin/**").hasAuthority("ADMIN")
-                .antMatchers("/employee/**").hasAuthority("USER")
+                .antMatchers("/admin/index.html").hasAuthority("Aaa")
+                .antMatchers("/admin/index.html").hasAuthority("Aaa")
+                .antMatchers("/admin/**").hasAuthority("aaa")
+                .antMatchers("app/employee/**").hasAuthority("aaa")
                 .and()
                 .formLogin()
-                .defaultSuccessUrl("/")
                 .loginProcessingUrl("/authenticate")
                 .usernameParameter("username")
                 .passwordParameter("password")
                 .successHandler(new AjaxAuthenticationSuccessHandler(new SavedRequestAwareAuthenticationSuccessHandler()))
-                .loginPage("/welcome")
-                .permitAll()
+                .loginPage("/")
                 .and()
                 .httpBasic()
                 .and()
                 .logout()
                 .logoutSuccessUrl("/")
-                .logoutUrl("/logout")
-                .permitAll();
+                .logoutUrl("/logout");
     }
 }
