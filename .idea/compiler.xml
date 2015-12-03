@@ -39,11 +39,11 @@
         <module name="persistence" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="persistence" target="1.6" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="persistence" target="1.8" />
       <module name="service" target="1.8" />
-      <module name="Tekkombud" target="1.6" />
-      <module name="web" target="1.6" />
+      <module name="Tekkombud" target="1.8" />
+      <module name="web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
