@@ -1,8 +1,3 @@
-angular.module('app',['ngRoute']).config(function($routeProvider){
-    $routeProvider
-        .when('/',{
-            templateUrl:'app/start.html',
-            controller: 'WelcomeController'
-        })
-        .otherwise({ redirectTo: '/'});
+angular.module('app',['ngRoute','spring-security-csrf-token-interceptor']).config(function($routeProvider){
+
 });

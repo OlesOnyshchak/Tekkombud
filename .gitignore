@@ -1,0 +1,6 @@
+.idea
+.project
+.classpath
+*.iml
+target/
+web/src/main/webapp/app/dependency/bower-components

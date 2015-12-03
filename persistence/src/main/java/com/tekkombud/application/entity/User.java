@@ -5,35 +5,43 @@ import com.tekkombud.application.entity.util.Status;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "USER")
+@NamedQueries({
+        @NamedQuery(
+                name = User.FIND_BY_USERNAME,
+                query = "select u from User u where username = :username"
+        )
+})
 public class User {
+    public static final String FIND_BY_USERNAME = "user.findByUserName";
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name="First_Name")
-    private String firstName;
-    @Column(name="Last_Name")
-    private String lastName;
-    @Column(name="Password")
+    @Column
+    private String username;
+    @Column
+    private String login;
+    @Column
     private String password;
     @Enumerated(value = EnumType.STRING)
     private Status status;
     public User() {
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getLogin() {
+        return login;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {

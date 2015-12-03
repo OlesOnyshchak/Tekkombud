@@ -22,6 +22,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        System.out.println("hello");
         auth.userDetailsService(securityUserDetailsService);
     }
 
@@ -35,22 +36,27 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/admin/index.html").hasAuthority("Aaa")
-                .antMatchers("/admin/index.html").hasAuthority("Aaa")
-                .antMatchers("/admin/**").hasAuthority("aaa")
-                .antMatchers("app/employee/**").hasAuthority("aaa")
+                .antMatchers("/admin/**").hasAuthority("ADMIN")
+                .antMatchers("/employee/**").hasAuthority("USER")
                 .and()
                 .formLogin()
                 .loginProcessingUrl("/authenticate")
+                .permitAll()
                 .usernameParameter("username")
                 .passwordParameter("password")
                 .successHandler(new AjaxAuthenticationSuccessHandler(new SavedRequestAwareAuthenticationSuccessHandler()))
                 .loginPage("/")
+                .permitAll()
                 .and()
                 .httpBasic()
                 .and()
                 .logout()
                 .logoutSuccessUrl("/")
-                .logoutUrl("/logout");
+                .logoutUrl("/logout")
+                .permitAll();
+
+        if ("true".equals(System.getProperty("httpsOnly"))) {
+            http.requiresChannel().anyRequest().requiresSecure();
+        }
     }
 }

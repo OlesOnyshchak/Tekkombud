@@ -22,6 +22,7 @@ angular.module('app')
 
             var response = $http(request);
             response.success(function (data) {
+                console.log("ok");
                 var path = redirectByRole(data);
                 $scope.login.password = null;
 
@@ -35,8 +36,8 @@ angular.module('app')
             });
             response.error(function (data) {
                 console.dir(data);
+                console.log("bad");
             });
-
 
             function redirectByRole(role) {
                 var path = undefined;

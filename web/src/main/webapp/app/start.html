@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <script type="text/javascript" src="app/dependency/bower-components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="app/dependency/bower-components/spring-security-csrf-token-interceptor/dist/spring-security-csrf-token-interceptor.min.js"></script>
 
 </head>
 
@@ -38,12 +39,12 @@
 <div class="container">
     <div class="row">
 
-        <div class="row" ng-controller="WelcomeController">
+      <!--  <div class="row" ng-controller="WelcomeController">
             <p></p>
             <input value="login" ng-model="loginInf.name">{{ loginInf.name }}
             <input value="password" ng-model="loginInf.password">
             <button value="submit" class="btn btn-success" ng-click="saveUser(loginInf)"></button>
-        </div>
+        </div>-->
         LOGIN
         <div class="row" ng-controller="LoginController">
             <input value="login" ng-model="login.username">{{ loginInfo.name }}
@@ -65,11 +66,11 @@
     </div>
 </div>
 
-<div class="navigation">
+<!--<div class="navigation">
     <div class=" navbar navbar-inverse navbar-fixed-bottom">
         <div class="text-white text-center">&copy; Copyright 2015</div>
     </div>
-</div>
+</div>-->
 
 <script src="app/welcome/js/welcome.js"></script>
 </body>

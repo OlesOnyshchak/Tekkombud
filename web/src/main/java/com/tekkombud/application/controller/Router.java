@@ -20,5 +20,4 @@ public class Router {
     public String provider() {
         return "/app/employee/index.html";
     }
-
 }

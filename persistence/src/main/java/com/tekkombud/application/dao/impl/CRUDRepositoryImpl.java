@@ -51,4 +51,14 @@ public class CRUDRepositoryImpl<T> implements CRUDRepository<T> {
     public void update(T object){
         entityManager.merge(object);
     }
+
+    @Override
+    public User findUserByUsername(String username) {
+
+        List<User> users = entityManager.createNamedQuery(User.FIND_BY_USERNAME, User.class)
+                .setParameter("username", username)
+                .getResultList();
+
+        return users.size() == 1 ? users.get(0) : null;
+    }
 }

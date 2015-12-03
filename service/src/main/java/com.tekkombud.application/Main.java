@@ -13,8 +13,7 @@ public class Main {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(PersistenceConfig.class);
         UserService userDao = applicationContext.getBean(UserService.class);
         User user = new User();
-        user.setFirstName("Oles");
-        user.setLastName("OOOOOnyshchak");
+        user.setUsername("Oles");
         user.setStatus(Status.ADMIN);
         user.setId(1L);
         user.setPassword("123");

@@ -1,5 +1,7 @@
 package com.tekkombud.application.dao;
 
+import com.tekkombud.application.entity.User;
+
 import java.util.List;
 
 /**
@@ -18,5 +20,7 @@ public interface CRUDRepository<T> {
     void delete(T object);
 
     void update(T object);
+
+    User findUserByUsername(String username);
 
 }
