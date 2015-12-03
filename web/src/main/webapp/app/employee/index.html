@@ -1,11 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="employee">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    EMPLOYEE
+    <script src="app/welcome/js/jquery.js"></script>
+    <link rel="stylesheet" href="app/welcome/css/welcome.css">
+    <script src="app/dependency/bower-components/angular/angular.js"></script>
+
+    <script type="text/javascript" src="app/employee/employee-module.js"></script>
+
+    <script src="app/employee/controller/employee-controller.js"></script>
+
+    <script src="app/dependency/bower-components/angular-route/angular-route.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script type="text/javascript"
+            src="app/dependency/bower-components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript"
+            src="app/dependency/bower-components/spring-security-csrf-token-interceptor/dist/spring-security-csrf-token-interceptor.min.js"></script>
 </head>
 <body>
-
+EMPLOYEE
+<div class="container">
+    <div class="row" ng-controller="SettingController">
+        <button ng-click="logout()"/>
+    </div>
+</div>
 </body>
 </html>
