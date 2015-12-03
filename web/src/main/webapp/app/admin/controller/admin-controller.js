@@ -1,5 +1,5 @@
 angular.module('admin')
-    .controller('SettingController', ['$scope', '$http', function ($scope, $http) {
+    .controller('SettingController', ['$scope', '$http','SettingService', function ($scope, $http, SettingService) {
         $scope.logout = function () {
             console.log("ok");
             $http({
@@ -8,6 +8,11 @@ angular.module('admin')
             }).then(function () {
                 window.location.replace("/");
             });
+        };
+        $scope.loginInf = {};
+        $scope.saveUser = function(reg) {
+            console.log(reg);
+            SettingService.create(reg);
         };
     }]);
 
