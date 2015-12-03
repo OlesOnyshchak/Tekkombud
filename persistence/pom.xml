@@ -59,6 +59,11 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>${myqsl.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>4.0.3.RELEASE</version>
+        </dependency>
 
     </dependencies>
 
