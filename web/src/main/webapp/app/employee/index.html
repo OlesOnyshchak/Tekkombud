@@ -25,13 +25,12 @@ EMPLOYEE
 <div class="container">
     <div class="row" ng-controller="SettingController">
         <p></p>
-        <input value="login" ng-model="loginInf.name">{{ loginInf.name }}
-        <input value="password" ng-model="loginInf.password">
-        <button value="submit" class="btn btn-success" ng-click="saveUser(loginInf)"></button>
+        <input type = "text" value="login" ng-model="loginInf.name">{{ loginInf.name }}
+        <input type = "text" ng-model="loginInf.password">
+        <input type = "button" value="submit" ng-click="saveUser(loginInf)">
+        <input type = "button" value="logout" ng-click="logout()"/>
     </div>
-    <div class="row" ng-controller="SettingController">
-        <button ng-click="logout()"/>
-    </div>
+
 </div>
 </body>
 </html>
