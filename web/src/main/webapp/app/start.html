@@ -2,22 +2,19 @@
 <html lang="en" ng-app="app">
 <head>
     <title>Tekkombud</title>
-    <script src="app/welcome/util/js/jquery.js"></script>
+    <link href='app/dependency/bower-components/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="app/welcome/util/css/welcome.css">
 
     <script src="app/dependency/bower-components/angular/angular.js"></script>
-
     <script type="text/javascript" src="app/app.js"></script>
-
     <script src="app/welcome/controller/welcome-controller.js"></script>
     <script src="app/welcome/controller/login-controller.js"></script>
     <script src="app/welcome/service/welcome-service.js"></script>
-
     <script src="app/dependency/bower-components/angular-route/angular-route.js"></script>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <script type="text/javascript" src="app/dependency/bower-components/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script type="text/javascript" src="app/dependency/bower-components/spring-security-csrf-token-interceptor/dist/spring-security-csrf-token-interceptor.min.js"></script>
+    <script type="text/javascript"
+            src="app/dependency/bower-components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript"
+            src="app/dependency/bower-components/spring-security-csrf-token-interceptor/dist/spring-security-csrf-token-interceptor.min.js"></script>
 
 </head>
 
@@ -37,47 +34,64 @@
 
 
 <div class="container">
-    <div class="row">
 
-      <!--  <div class="row" ng-controller="WelcomeController">
-            <p></p>
-            <input value="login" ng-model="loginInf.name">{{ loginInf.name }}
-            <input value="password" ng-model="loginInf.password">
-            <button value="submit" class="btn btn-success" ng-click="saveUser(loginInf)"></button>
-        </div>-->
-        LOGIN
-        <div class="row" ng-controller="LoginController">
-            <input value="login" ng-model="login.username">{{ loginInfo.name }}
-            <input value="password" ng-model="login.password">
-            <input type="button" value ="submit" ng-click="login()"></input>
-        </div>
-        <!--<img id="img" src="app/welcome/photo/banner1.jpg"/>-->
 
-     <!--   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators ">
-                <li class="active" onclick="display(0)"></li>
-                <li onclick="display(1)"></li>
-                <li onclick="display(2)"></li>
-            </ol>
-        </div>
-        <div class="wrapper">
-            <div ui-view="modal" autoscroll="true"></div>
-        </div>-->
+    <!--  <div class="row" ng-controller="WelcomeController">
+          <p></p>
+          <input value="login" ng-model="loginInf.name">{{ loginInf.name }}
+          <input value="password" ng-model="loginInf.password">
+          <button value="submit" class="btn btn-success" ng-click="saveUser(loginInf)"></button>
+      </div>-->
+    LOGIN
+    <div ng-controller="LoginController">
+        <input value="login" ng-model="login.username">{{ loginInfo.name }}
+        <input value="password" ng-model="login.password">
+        <input type="button" value="submit" ng-click="login()">
     </div>
-</div>
 
-<form>
-    <lable>Recipe name</lable>
-    <input type="text">
-    <input type="submit" value="click to submit">
-</form>
+
+    <!--<img id="img" src="app/welcome/photo/banner1.jpg"/>-->
+
+    <!--   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+           <ol class="carousel-indicators ">
+               <li class="active" onclick="display(0)"></li>
+               <li onclick="display(1)"></li>
+               <li onclick="display(2)"></li>
+           </ol>
+       </div>
+       <div class="wrapper">
+           <div ui-view="modal" autoscroll="true"></div>
+       </div>-->
+
+</div>
 
 <!--<div class="navigation">
     <div class=" navbar navbar-inverse navbar-fixed-bottom">
         <div class="text-white text-center">&copy; Copyright 2015</div>
     </div>
 </div>-->
+<div class='footer'>
+    <div class='container'>
+        <div class='row'>
+            <div class="col-md-3">
+                <h4>Who We Are</h4>
+            </div>
 
+            <div class="col-md-2">
+                <h4>Links</h4>
+            </div>
+            <div class="col-md-2">
+                <h4>Stay in Touch</h4>
+            </div>
+            <div class="col-md-3">
+                <h4>Contact Us</h4>
+                <p>Blasting Off With Bootstrap &copy;2214.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script src='app/dependency/bower-components/bootstrap/dist/js/bootstrap.min.js'></script>
 <script src="app/welcome/util/js/welcome.js"></script>
 </body>
 </html>`
