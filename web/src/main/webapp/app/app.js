@@ -1,2 +1,2 @@
-angular.module('app',['ngRoute','spring-security-csrf-token-interceptor']).config(function($routeProvider){
+angular.module('app',['ngRoute','spring-security-csrf-token-interceptor','ui.router']).config(function($routeProvider){
 });

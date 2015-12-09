@@ -1,14 +1,14 @@
 .banner{
-    width:100%;
-    min-height:189px;
+    width:90%;
+    height:90%;
 }
 .text-white {color: #fff;}
 
-.center .navbar-inner {
-    text-align:center;
-}
 .wrapper {
     text-align: center;
+}
+.image{
+
 }
 
 .carousel-indicators li {
@@ -16,4 +16,7 @@
 
 .carousel-indicators .active {
     background-color: yellow !important;
+}
+.login{
+
 }

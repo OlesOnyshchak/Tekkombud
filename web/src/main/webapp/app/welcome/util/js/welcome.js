@@ -1,23 +1,23 @@
-/*$(document).ready(function(){
+$(document).ready(function(){
     display(0);
     setInterval(displayNextImage, 5000);
-});*/
+});
 
 var listSelector = "ol li";
 var images = [];
 var x = -1;
-images[0] = "app/welcome/photo/banner1.jpg";
-images[1] = "app/welcome/photo/banner.jpg";
-images[2] = "app/welcome/photo/banner2.jpg";
+images[0] = "app/welcome/util/photo/banner1.jpg";
+images[1] = "app/welcome/util/photo/banner.jpg";
+images[2] = "app/welcome/util/photo/banner2.jpg";
 
-/*function display(position) {
+function display(position) {
     x = position;
     document.getElementById("img").src = images[position];
     $(listSelector).on('click', function () {
         $(listSelector + ", .active").removeClass('active');
         $(this).addClass('active');
     });
-}*/
+}
 
 function displayNextImage() {
     if(x == 0){
