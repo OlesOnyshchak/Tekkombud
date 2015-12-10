@@ -1,7 +1,7 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
     display(0);
     setInterval(displayNextImage, 5000);
-});
+});*/
 
 var listSelector = "ol li";
 var images = [];
