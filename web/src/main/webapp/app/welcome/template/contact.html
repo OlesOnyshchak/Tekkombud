@@ -1,20 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
 </head>
+
 <body>
-CONTACT
-CONTACT
-CONTACT
-CONTACT
-CONTACT
-CONTACT
-CONTACT
-CONTACT
-CONTACT
-CONTACT
+<div class="container-fluid">
+    <form id="contact-form">
+        <h1>Contact us</h1>
+
+        <div class="note">
+            <p>We are here to answer any questions you may have about our experiences.
+                Reach out to us and we'll respond as soon as we can.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="name">
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="email">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <textarea type="text" class="form-control" placeholder="message"
+                              ng-model="login.password"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <button type="submit" class="btn btn-success" ng-click="login()">submit</button>
+            <button type="decline" class="btn btn-warning" ng-click="login()">decline</button>
+        </div>
+    </form>
+</div>
 
 </body>
+
 </html>

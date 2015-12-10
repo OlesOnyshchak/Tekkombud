@@ -7,16 +7,18 @@
 
     <script src="app/dependency/bower-components/angular/angular.js"></script>
     <script type="text/javascript" src="app/app.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+
     <script src="app/welcome/controller/welcome-controller.js"></script>
     <script src="app/welcome/controller/login-controller.js"></script>
     <script src="app/welcome/service/welcome-service.js"></script>
+
+
     <script src="app/dependency/bower-components/angular-route/angular-route.js"></script>
     <script type="text/javascript"
             src="app/dependency/bower-components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script type="text/javascript"
             src="app/dependency/bower-components/spring-security-csrf-token-interceptor/dist/spring-security-csrf-token-interceptor.min.js"></script>
-
-
 </head>
 
 <body>
@@ -73,9 +75,8 @@
     <div ui-view></div>
 </div>
 
-<footer>
-    <div class="container">
-        <div class="row">
+    <div class="container-fluid">
+        <div class="footer">
             <div class="col-md-4">
                 <span class="copyright">Copyright © Zero4Startup 2014</span>
             </div>
@@ -101,7 +102,6 @@
             </div>
         </div>
     </div>
-</footer>
 <script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 <script src='app/dependency/bower-components/bootstrap/dist/js/bootstrap.min.js'></script>
 <script src="app/welcome/util/js/welcome.js"></script>

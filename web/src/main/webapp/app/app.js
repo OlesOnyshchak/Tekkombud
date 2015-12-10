@@ -10,7 +10,8 @@ module.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
         })
         .state('contact', {
             url:'/contact',
-            templateUrl: 'app/welcome/template/contact.html'
+            templateUrl: 'app/welcome/template/contact.html',
+            controller: 'WelcomeController'
         })
         .state('home', {
             url:'/home',
