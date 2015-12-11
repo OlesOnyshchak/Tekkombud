@@ -1,10 +1,8 @@
 angular.module('app')
-    .controller('WelcomeController', ['$scope','WelcomeService','$modal', function($scope, WelcomeService,$modal) {
-        $scope.message= {};
+    .controller('WelcomeController', ['$scope', 'WelcomeService', '$modal', function ($scope, WelcomeService, $modal) {
+        $scope.message = {};
 
-        $scope.saveMessage = function(reg){
-            console.log(reg);
-
+        $scope.saveMessage = function (reg) {
             var modalInstance = $modal.open({
                 animation: true,
                 templateUrl: 'app/welcome/template/modals/confirm-message.html',
@@ -12,15 +10,19 @@ angular.module('app')
                 size: 'md',
                 resolve: {
                     response: function () {
+                        console.log("hello");
                         return reg;
                     }
                 }
             });
-           /* WelcomeService.saveMessage(reg);
-            $scope.message= {};*/
+            modalInstance.result.then(function (result) {
+                if (result === "submit"){
+                    $scope.message = {};
+                }
+            })
         };
 
-        $scope.clearMessage = function(){
-            $scope.message= {};
+        $scope.clearMessage = function () {
+            $scope.message = {};
         }
     }]);
