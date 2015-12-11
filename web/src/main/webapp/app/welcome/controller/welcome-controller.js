@@ -15,6 +15,7 @@ angular.module('app')
                     }
                 }
             });
+
             modalInstance.result.then(function (result) {
                 if (result === "submit"){
                     $scope.message = {};

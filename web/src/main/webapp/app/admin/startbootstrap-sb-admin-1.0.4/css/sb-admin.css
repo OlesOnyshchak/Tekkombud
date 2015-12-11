@@ -1,14 +1,6 @@
-/*!
- * Start Bootstrap - SB Admin Bootstrap Admin Template (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
-/* Global Styles */
-
 body {
     margin-top: 100px;
-    background-color: #222;
+    background-color: white;
 }
 
 @media(min-width:768px) {
@@ -24,7 +16,7 @@ body {
 #page-wrapper {
     width: 100%;
     padding: 0;
-    background-color: #fff;
+    background-color: rgba(237, 237, 237, 0.5); //
 }
 
 .huge {
@@ -44,20 +36,20 @@ body {
 
 /* Top Navigation */
 
-.top-nav {
-    padding: 0 15px;
-}
+
 
 .top-nav>li {
     display: inline-block;
     float: left;
+
+    background-color: rgba(237, 237, 237, 0.5); //
 }
 
 .top-nav>li>a {
     padding-top: 15px;
     padding-bottom: 15px;
     line-height: 20px;
-    color: #999;
+    color: rgb(20, 20, 20);//
 }
 
 .top-nav>li>a:hover,
@@ -66,7 +58,7 @@ body {
 .top-nav>.open>a:hover,
 .top-nav>.open>a:focus {
     color: #fff;
-    background-color: #000;
+    background-color: white;
 }
 
 .top-nav>.open>.dropdown-menu {
@@ -122,7 +114,7 @@ ul.alert-dropdown {
         border: none;
         border-radius: 0;
         overflow-y: auto;
-        background-color: #222;
+        background-color: rgba(237, 237, 237, 0.5); //
         bottom: 0;
         overflow-x: hidden;
         padding-bottom: 40px;
@@ -130,12 +122,17 @@ ul.alert-dropdown {
 
     .side-nav>li>a {
         width: 225px;
+
+    }
+    .navbar,.navbar-inverse,.navbar-fixed-top{
+        background-color: rgba(237, 237, 237, 0.5); //
+        border: none;
     }
 
     .side-nav li a:hover,
     .side-nav li a:focus {
         outline: none;
-        background-color: #000 !important;
+        background-color: white;
     }
 }
 
@@ -147,81 +144,10 @@ ul.alert-dropdown {
     display: block;
     padding: 10px 15px 10px 38px;
     text-decoration: none;
-    color: #999;
+    color: white;
 }
 
-.side-nav>li>ul>li>a:hover {
-    color: #fff;
-}
 
-/* Flot Chart Containers */
 
-.flot-chart {
-    display: block;
-    height: 400px;
-}
 
-.flot-chart-content {
-    width: 100%;
-    height: 100%;
-}
 
-/* Custom Colored Panels */
-
-.huge {
-    font-size: 40px;
-}
-
-.panel-green {
-    border-color: #5cb85c;
-}
-
-.panel-green > .panel-heading {
-    border-color: #5cb85c;
-    color: #fff;
-    background-color: #5cb85c;
-}
-
-.panel-green > a {
-    color: #5cb85c;
-}
-
-.panel-green > a:hover {
-    color: #3d8b3d;
-}
-
-.panel-red {
-    border-color: #d9534f;
-}
-
-.panel-red > .panel-heading {
-    border-color: #d9534f;
-    color: #fff;
-    background-color: #d9534f;
-}
-
-.panel-red > a {
-    color: #d9534f;
-}
-
-.panel-red > a:hover {
-    color: #b52b27;
-}
-
-.panel-yellow {
-    border-color: #f0ad4e;
-}
-
-.panel-yellow > .panel-heading {
-    border-color: #f0ad4e;
-    color: #fff;
-    background-color: #f0ad4e;
-}
-
-.panel-yellow > a {
-    color: #f0ad4e;
-}
-
-.panel-yellow > a:hover {
-    color: #df8a13;
-}
