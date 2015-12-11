@@ -23,26 +23,26 @@
             <div class="col-md-6">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="name">
+                        <input type="text" class="form-control" placeholder="name" ng-model="message.name">
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="email">
+                        <input type="text" class="form-control" placeholder="email" ng-model="message.email">
                     </div>
                 </div>
 
                 <div class="col-md-12">
                     <div class="form-group">
                         <textarea type="text" class="form-control" placeholder="message"
-                                  ng-model="login.password"></textarea>
+                                  ng-model="message.text"></textarea>
                     </div>
                 </div>
 
                 <div class="col-md-12">
-                    <button type="submit" class="btn btn-success submit-button" ng-click="login()">submit</button>
-                    <button type="submit" class="btn btn-warning decline-button" ng-click="login()">decline</button>
+                    <button type="submit" class="btn btn-success submit-button" ng-click="saveMessage(message)">submit</button>
+                    <button type="submit" class="btn btn-warning decline-button" ng-click="clearMessage()">clear</button>
                 </div>
             </div>
 

@@ -1,10 +1,9 @@
-package com.tekkombud.application.service.impl;
+package com.tekkombud.application.service.user.impl;
 
 import com.tekkombud.application.dao.CRUDRepository;
 import com.tekkombud.application.entity.User;
-import com.tekkombud.application.service.UserService;
+import com.tekkombud.application.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 @Service

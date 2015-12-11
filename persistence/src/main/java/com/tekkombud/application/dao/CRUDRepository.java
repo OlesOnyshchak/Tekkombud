@@ -4,9 +4,6 @@ import com.tekkombud.application.entity.User;
 
 import java.util.List;
 
-/**
- * Created by Oles Onyshchak on 11/15/2015.
- */
 public interface CRUDRepository<T> {
 
     void setObjectClass(Class<T> objectClass);

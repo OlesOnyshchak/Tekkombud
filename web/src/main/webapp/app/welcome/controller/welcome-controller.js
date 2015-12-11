@@ -1,27 +1,26 @@
 angular.module('app')
-    .controller('WelcomeController', ['$scope','WelcomeService', function($scope, WelcomeService) {
-        $scope.loginInf = {};
-        $scope.login = {};
+    .controller('WelcomeController', ['$scope','WelcomeService','$modal', function($scope, WelcomeService,$modal) {
+        $scope.message= {};
 
-        function initialize() {
-            var mapProp = {
-                center:new google.maps.LatLng(51.508742,-0.120850),
-                zoom:5,
-                mapTypeId:google.maps.MapTypeId.ROADMAP
-            };
-            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        $scope.saveMessage = function(reg){
+            console.log(reg);
+
+            var modalInstance = $modal.open({
+                animation: true,
+                templateUrl: 'app/welcome/template/modals/confirm-message.html',
+                controller: 'ModalWelcomeController',
+                size: 'md',
+                resolve: {
+                    response: function () {
+                        return reg;
+                    }
+                }
+            });
+           /* WelcomeService.saveMessage(reg);
+            $scope.message= {};*/
+        };
+
+        $scope.clearMessage = function(){
+            $scope.message= {};
         }
-        google.maps.event.addDomListener(window, 'load', initialize);
-
-
-
-        $scope.saveUser = function(reg) {
-            console.log(reg);
-            WelcomeService.create(reg);
-        };
-
-        $scope.save = function(reg) {
-            console.log(reg);
-            WelcomeService.create(reg);
-        };
     }]);
