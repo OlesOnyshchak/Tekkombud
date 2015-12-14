@@ -10,9 +10,11 @@ admin.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $
         .state('cv', {
             url:'/cv',
             templateUrl: 'app/admin/template/cv.html'
+
         })
         .state('message', {
             url:'/message',
-            templateUrl: 'app/admin/template/message.html'
+            templateUrl: 'app/admin/template/message.html',
+            controller:'MessageController'
         })
 }]);
