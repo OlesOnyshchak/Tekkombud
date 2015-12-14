@@ -1,9 +1,15 @@
 angular.module('admin')
-    .factory("SettingService",['$http', function SettingServiceFactory($http){
+    .factory("SettingService", ['$http', function SettingServiceFactory($http) {
         return {
-            create: function(reg){
-                return $http.post('registration',reg).success(function(data){
+            create: function (reg) {
+                return $http.post('registration', reg).success(function (data) {
                     console.log("ok");
+                });
+            },
+            getAll: function () {
+                console.log("oj");
+                return $http.get('messages').success(function(data) {
+                    $scope.greeting = data;
                 });
             }
         }
