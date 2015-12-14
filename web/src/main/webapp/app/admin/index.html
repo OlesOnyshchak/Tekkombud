@@ -5,6 +5,8 @@
     <title>Title</title>
 
     <script src="app/dependency/bower-components/angular/angular.js"></script>
+    <script src="app/dependency/bower-components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="app/dependency/bower-components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 
     <script type="text/javascript" src="app/admin/admin-module.js"></script>
 
@@ -14,10 +16,13 @@
     <script src="app/dependency/bower-components/angular-route/angular-route.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <script type="text/javascript"
-            src="app/dependency/bower-components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
     <script type="text/javascript"
             src="app/dependency/bower-components/spring-security-csrf-token-interceptor/dist/spring-security-csrf-token-interceptor.min.js"></script>
+
+    <script src="app/dependency/bower-components/angular-route/angular-route.js"></script>
+    <script type="text/javascript"
+            src="app/dependency/bower-components/angular-ui-router/release/angular-ui-router.min.js"></script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,12 +56,12 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="SettingController">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="hidden">
-                        <a href="#page-top"></a>
+                        <a href="#/page-top"></a>
                     </li>
                     <li>
                         <a href="#">Account &#9662;</a>
                         <ul class="dropdown">
-                            <li><a href="#" ng-click = "logout()">logout</a></li>
+                            <li><a href="#" ng-click="logout()">logout</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -69,19 +74,11 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
                 <li class="">
-                    <a href=""><i class="fa fa-fw fa-dashboard"></i>Messages</a>
+                    <a href="#/message"><i class="fa fa-fw fa-dashboard"></i>Messages</a>
                 </li>
                 <li>
-                    <a href=""><i
-                            class="fa fa-fw fa-bar-chart-o"></i>CV</a>
+                    <a href="#/cv"><i class="fa fa-fw fa-bar-chart-o"></i>CV</a>
                 </li>
-                <li>
-                    <a href=""><i class="fa fa-fw fa-table"></i>Tables</a>
-                </li>
-                <li>
-                    <a href=""><i class="fa fa-fw fa-edit"></i> Forms</a>
-                </li>
-
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -91,17 +88,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    ffefefe
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    feffe
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 ">
-                    fefefe
+                    <div ui-view></div>
                 </div>
             </div>
         </div>
@@ -109,7 +96,7 @@
 </div>
 <!-- /#wrapper -->
 
-<div class="container">
+<!--<div class="container">
     <div class="row" ng-controller="SettingController">
         <p></p>
         <input type="text" ng-model="loginInf.name">{{ loginInf.name }}
@@ -117,7 +104,6 @@
         <input type="button" value="submit" ng-click="saveUser(loginInf)">
         <input type="button" value="logout" ng-click="logout()"/>
     </div>
-
-</div>
+</div>-->
 </body>
 </html>
