@@ -1,6 +1,7 @@
 package com.tekkombud.application.dao.impl;
 
 import com.tekkombud.application.dao.CRUDRepository;
+import com.tekkombud.application.entity.Messenger;
 import com.tekkombud.application.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;

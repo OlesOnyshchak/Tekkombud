@@ -7,9 +7,8 @@ angular.module('admin')
                 });
             },
             getAll: function () {
-                console.log("oj");
                 return $http.get('messages').success(function(data) {
-                    $scope.greeting = data;
+                    console.log(data);
                 });
             }
         }

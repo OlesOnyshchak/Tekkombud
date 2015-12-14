@@ -7,13 +7,21 @@ import com.tekkombud.application.service.messenger.MessengerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MessengerServiceImpl implements MessengerService {
     @Autowired
-    CRUDRepository crudRepository;
+    CRUDRepository <Messenger>crudRepository;
 
     @Override
     public void saveMessage(Messenger messenger) {
         crudRepository.save(messenger);
+    }
+
+    @Override
+    public List<Messenger> getAllMessage() {
+        crudRepository.setObjectClass(Messenger.class);
+        return crudRepository.findALL();
     }
 }
