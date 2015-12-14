@@ -11,7 +11,6 @@ angular.module('admin')
         };
         $scope.loginInf = {};
         $scope.saveUser = function(reg) {
-            console.log(reg);
             SettingService.create(reg);
         };
     }]);

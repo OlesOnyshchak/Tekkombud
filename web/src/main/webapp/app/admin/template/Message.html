@@ -9,5 +9,35 @@ Message
 
 <button class="btn-success" ng-click="getMess()"></button>
 
+<form class="form-inline">
+    <div class="form-group">
+        <label >Search</label>
+        <input type="text" ng-model="search" class="form-control" placeholder="Search">
+    </div>
+</form>
+
+<table class="table table-striped table-hover">
+    <thead>
+    <tr>
+        <th ng-click="sort('id')">Id<span class="glyphicon sort-icon" ng-show="sortKey=='id'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
+        <th ng-click="sort('name')">Name  <span class="glyphicon sort-icon" ng-show="sortKey=='name'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
+        <th ng-click="sort('email')">Email  <span class="glyphicon sort-icon" ng-show="sortKey=='email'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
+        <th ng-click="sort('text')">Text  <span class="glyphicon sort-icon" ng-show="sortKey=='text'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr dir-paginate="message in messages|orderBy:sortKey:reverse|filter:search|itemsPerPage:5">
+        <td>{{message.id}}</td>
+        <td>{{message.name}}</td>
+        <td>{{message.email}}</td>
+        <td>{{message.text}}</td>
+    </tr>
+    </tbody>
+</table>
+<dir-pagination-controls
+        max-size="5"
+        direction-links="true"
+        boundary-links="true" >
+</dir-pagination-controls>
 </body>
 </html>

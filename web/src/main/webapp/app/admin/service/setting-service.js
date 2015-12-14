@@ -7,8 +7,8 @@ angular.module('admin')
                 });
             },
             getAll: function () {
-                return $http.get('messages').success(function(data) {
-                    console.log(data);
+                return $http.get('messages').then(function (response) {
+                    return response.data;
                 });
             }
         }

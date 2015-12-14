@@ -1,4 +1,4 @@
-var admin = angular.module('admin',['ngRoute','spring-security-csrf-token-interceptor', 'ui.router','ui.bootstrap']);
+var admin = angular.module('admin',['ngRoute','spring-security-csrf-token-interceptor', 'ui.router','ui.bootstrap','angularUtils.directives.dirPagination']);
 admin.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
 
