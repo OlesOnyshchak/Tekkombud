@@ -24,19 +24,16 @@ public class CRUDRepositoryImpl<T> implements CRUDRepository<T> {
     }
 
     @Override
-    @Transactional
     public void save(T object) {
         entityManager.merge(object);
     }
 
     @Override
-    @Transactional
     public T findById(Long id) {
         return entityManager.find(objectClass,id);
     }
 
     @Override
-    @Transactional
     public void delete(Long id){
         T object = entityManager.find(objectClass, id);
         if (object != null) {
@@ -45,13 +42,11 @@ public class CRUDRepositoryImpl<T> implements CRUDRepository<T> {
     }
 
     @Override
-    @Transactional
     public List<T> findALL() {
         return entityManager.createQuery("FROM " + objectClass.getSimpleName(),objectClass).getResultList();
     }
 
     @Override
-    @Transactional
     public void update(T object){
         entityManager.merge(object);
     }

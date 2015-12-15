@@ -28,8 +28,21 @@ angular.module('admin')
             modalInstance.result.then(function (result) {
                 console.log(result);
                 if (result === "submit"){
-                    console.log("do");
                     getMessages();
+                }
+            });
+        };
+
+        $scope.info = function(information){
+            var modalInstance = $modal.open({
+                animation: true,
+                templateUrl: 'app/admin/template/modals/information-modal.html',
+                controller: 'InfoMessageController',
+                size: 'md',
+                resolve: {
+                    response: function () {
+                        return information;
+                    }
                 }
             });
         }

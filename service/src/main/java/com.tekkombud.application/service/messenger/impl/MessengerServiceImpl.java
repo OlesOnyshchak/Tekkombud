@@ -6,6 +6,7 @@ import com.tekkombud.application.entity.User;
 import com.tekkombud.application.service.messenger.MessengerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ public class MessengerServiceImpl implements MessengerService {
     CRUDRepository <Messenger>crudRepository;
 
     @Override
+    @Transactional
     public void saveMessage(Messenger messenger) {
         crudRepository.save(messenger);
     }
@@ -26,6 +28,7 @@ public class MessengerServiceImpl implements MessengerService {
     }
 
     @Override
+    @Transactional
     public void delete(Integer id) {
         crudRepository.setObjectClass(Messenger.class);
         crudRepository.delete(Long.valueOf(id));
