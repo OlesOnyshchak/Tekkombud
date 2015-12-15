@@ -31,14 +31,17 @@ public class CRUDRepositoryImpl<T> implements CRUDRepository<T> {
 
     @Override
     @Transactional
-    public T findById(String id) {
-        return entityManager.find(objectClass,objectClass);
+    public T findById(Long id) {
+        return entityManager.find(objectClass,id);
     }
 
     @Override
     @Transactional
-    public void delete(T object){
-        entityManager.remove(object);
+    public void delete(Long id){
+        T object = entityManager.find(objectClass, id);
+        if (object != null) {
+            entityManager.remove(object);
+        }
     }
 
     @Override

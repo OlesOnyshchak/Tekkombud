@@ -10,11 +10,11 @@ public interface CRUDRepository<T> {
 
     void save(T object);
 
-    T findById(String id);
+    T findById(Long id);
 
     List<T> findALL();
 
-    void delete(T object);
+    void delete(Long id);
 
     void update(T object);
 

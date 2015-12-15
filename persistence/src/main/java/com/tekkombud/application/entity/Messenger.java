@@ -44,4 +44,14 @@ public class Messenger {
     public void setMessage(String text) {
         this.text = text;
     }
+
+    @Override
+    public String toString() {
+        return "Messenger{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", text='" + text + '\'' +
+                '}';
+    }
 }

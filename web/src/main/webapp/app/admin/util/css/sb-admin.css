@@ -49,6 +49,12 @@ ul li a{
 th {
     cursor:pointer;
 }
+
+.center
+{
+    margin-left: 200px;
+}
+
 ul li a:hover{
     color: #fff;
     background: #939393;
@@ -112,6 +118,9 @@ ul li ul.dropdown li{
     padding: 10px 15px 10px 38px;
     text-decoration: none;
     color: white;
+}
+.center{
+    padding-left: 20%;
 }
 
 

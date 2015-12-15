@@ -9,4 +9,6 @@ public interface MessengerService {
     void saveMessage(Messenger messenger);
 
     List<Messenger> getAllMessage();
+
+    void delete(Integer id);
 }

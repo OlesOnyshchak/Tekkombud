@@ -5,10 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-Message
-Mes
 
-<button class="btn-success" ng-click="getMess()"></button>
+<div class="center">
+    <h1>Messages</h1>
+</div>
 
 <form class="form-inline">
     <div class="form-group">
@@ -24,6 +24,7 @@ Mes
         <th ng-click="sort('name')">Name  <span class="glyphicon sort-icon" ng-show="sortKey=='name'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
         <th ng-click="sort('email')">Email  <span class="glyphicon sort-icon" ng-show="sortKey=='email'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
         <th ng-click="sort('text')">Text  <span class="glyphicon sort-icon" ng-show="sortKey=='text'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
+        <th>Delete</th>
     </tr>
     </thead>
     <tbody>
@@ -32,6 +33,8 @@ Mes
         <td>{{message.name}}</td>
         <td>{{message.email}}</td>
         <td>{{message.text}}</td>
+        <td><a ng-click="delete(message.id)"><i class="glyphicon glyphicon-minus"></i></a>
+            <a ng-click="info(message)"><i class="glyphicon glyphicon-info-sign"></i></a></td>
     </tr>
     </tbody>
 </table>

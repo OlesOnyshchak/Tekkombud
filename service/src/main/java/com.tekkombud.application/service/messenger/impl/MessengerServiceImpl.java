@@ -24,4 +24,10 @@ public class MessengerServiceImpl implements MessengerService {
         crudRepository.setObjectClass(Messenger.class);
         return crudRepository.findALL();
     }
+
+    @Override
+    public void delete(Integer id) {
+        crudRepository.setObjectClass(Messenger.class);
+        crudRepository.delete(Long.valueOf(id));
+    }
 }

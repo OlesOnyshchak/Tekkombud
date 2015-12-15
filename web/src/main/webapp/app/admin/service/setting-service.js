@@ -10,6 +10,11 @@ angular.module('admin')
                 return $http.get('messages').then(function (response) {
                     return response.data;
                 });
+            },
+            deleteMessageById:function(id){
+                return $http.delete('delete-message/'+ id).then(function (response) {
+                    console.log("ok");
+                });
             }
         }
     }]);
