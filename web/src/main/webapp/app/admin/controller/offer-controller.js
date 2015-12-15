@@ -1,16 +1,16 @@
-angular.module('app')
-    .controller('WelcomeController', ['$scope', 'WelcomeService', '$modal', function ($scope, WelcomeService, $modal) {
-        $scope.message = {};
+angular.module('admin')
+    .controller('OfferController', ['$scope', '$http', 'SettingService', '$modal', function ($scope, $http, SettingService, $modal) {
+        $scope.jobInformation = {};
 
-        $scope.saveMessage = function (reg) {
+        $scope.saveMessage = function (info) {
             var modalInstance = $modal.open({
                 animation: true,
-                templateUrl: 'app/welcome/template/modals/confirm-message.html',
+                templateUrl: 'app/admin/template/modals/confirm-message.html',
                 controller: 'ModalWelcomeController',
                 size: 'md',
                 resolve: {
                     response: function () {
-                        return reg;
+                        return info;
                     }
                 }
             });
@@ -21,8 +21,5 @@ angular.module('app')
                 }
             })
         };
-
-        $scope.clearMessage = function () {
-            $scope.message = {};
-        }
     }]);
+

@@ -21,4 +21,8 @@ module.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
             url:'/project',
             templateUrl: 'app/welcome/template/project.html'
         })
+        .state('offer', {
+            url:'/offer',
+            templateUrl: 'app/welcome/template/offer.html'
+        })
 }]);

@@ -17,4 +17,9 @@ admin.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $
             templateUrl: 'app/admin/template/message.html',
             controller:'MessageController'
         })
+        .state('offer', {
+            url:'/offer',
+            templateUrl: 'app/admin/template/offer.html',
+            controller:'OfferController'
+        })
 }]);

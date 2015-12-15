@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="row">
+    <form id="contact-form">
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="job name" ng-model="jobInformation.name">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                        <textarea type="text" class="form-control" placeholder="job description"
+                                  ng-model="jobInformation.description"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="job skills" ng-model="jobInformation.skill">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="job salary" ng-model="jobInformation.salary">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-success submit-button" ng-click="saveMessage(message)">submit</button>
+            <button type="submit" class="btn btn-warning decline-button" ng-click="clearMessage()">clear</button>
+        </div>
+
+    </form>
+</div>
+</body>
+</html>
