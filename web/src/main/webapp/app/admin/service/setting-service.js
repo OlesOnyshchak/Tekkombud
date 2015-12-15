@@ -20,6 +20,11 @@ angular.module('admin')
                 return $http.post('add-offer', offer).success(function (data) {
                     console.log("ok");
                 });
+            },
+            getAllOffers: function () {
+                return $http.get('offers').then(function (response) {
+                    return response.data;
+                });
             }
         }
     }]);

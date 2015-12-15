@@ -21,8 +21,23 @@ angular.module('admin')
                 }
             })
         };
+
         $scope.clearMessage = function () {
             $scope.jobInformation = {};
+        };
+
+        function getOffers() {
+            SettingService.getAllOffers().then(function (data) {
+                console.log(data);
+                $scope.jobInfo = data;
+
+            });
+
+            $scope.sort = function(keyname){
+                $scope.sortKey = keyname;   //set the sortKey to the param passed
+                $scope.reverse = !$scope.reverse; //if true make it false and vice versa
+            }
         }
+        getOffers();
     }]);
 

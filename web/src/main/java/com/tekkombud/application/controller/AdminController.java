@@ -2,6 +2,7 @@ package com.tekkombud.application.controller;
 
 import com.tekkombud.application.entity.Messenger;
 import com.tekkombud.application.entity.Offer;
+import com.tekkombud.application.entity.util.OfferStatus;
 import com.tekkombud.application.service.messenger.MessengerService;
 import com.tekkombud.application.service.offer.OfferService;
 import org.springframework.beans.factory.ListableBeanFactory;
@@ -21,7 +22,7 @@ public class AdminController {
     OfferService offerService;
 
     @RequestMapping(value = "messages", method = RequestMethod.GET)
-    public List<Messenger> saveMessage() {
+    public List<Messenger> getAllMessage() {
         return messengerService.getAllMessage();
     }
 
@@ -33,6 +34,12 @@ public class AdminController {
     @RequestMapping(value = "add-offer", method = RequestMethod.POST)
     public void addOffer(@RequestBody Offer offer) {
         System.out.println(offer.getName());
+        offer.setOfferStatus(OfferStatus.ACTIVE);
         offerService.save(offer);
+    }
+
+    @RequestMapping(value = "offers", method = RequestMethod.GET)
+    public List<Offer> getAllOffer() {
+        return offerService.getAllMessage();
     }
 }

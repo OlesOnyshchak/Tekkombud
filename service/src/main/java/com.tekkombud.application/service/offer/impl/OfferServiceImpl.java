@@ -21,4 +21,10 @@ public class OfferServiceImpl implements OfferService {
     public void save(Offer offer) {
         crudRepository.save(offer);
     }
+
+    @Override
+    public List<Offer> getAllMessage() {
+        crudRepository.setObjectClass(Offer.class);
+        return crudRepository.findALL();
+    }
 }

@@ -50,6 +50,38 @@
         </div>
 
     </form>
+
+    <h2>All offers</h2>
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th ng-click="sort('id')">Id<span class="glyphicon sort-icon" ng-show="sortKey=='id'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
+            <th ng-click="sort('name')">Name  <span class="glyphicon sort-icon" ng-show="sortKey=='name'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
+            <th ng-click="sort('description')">Email  <span class="glyphicon sort-icon" ng-show="sortKey=='description'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
+            <th ng-click="sort('offerStatus')">Text  <span class="glyphicon sort-icon" ng-show="sortKey=='offerStatus'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
+            <th ng-click="sort('skills')">Text  <span class="glyphicon sort-icon" ng-show="sortKey=='skills'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
+            <th ng-click="sort('salary')">Text  <span class="glyphicon sort-icon" ng-show="sortKey=='salary'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span></th>
+            <th>Manipulation</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr dir-paginate="info in jobInfo|orderBy:sortKey:reverse|filter:search|itemsPerPage:5">
+            <td>{{info.id}}</td>
+            <td>{{info.name}}</td>
+            <td>{{info.description}}</td>
+            <td>{{info.offerStatus}}</td>
+            <td>{{info.skills}}</td>
+            <td>{{info.salary}}</td>
+            <td><a ng-click="delete(jobInfo.id)" title="Click to delete message"><i class="glyphicon glyphicon-minus"></i></a>
+                <a ng-click="info(jobInfo)" title="Click to get detailed information"><i class="glyphicon glyphicon-info-sign"></i></a></td>
+        </tr>
+        </tbody>
+    </table>
+    <dir-pagination-controls
+            max-size="5"
+            direction-links="true"
+            boundary-links="true" >
+    </dir-pagination-controls>
 </div>
 </body>
 </html>
