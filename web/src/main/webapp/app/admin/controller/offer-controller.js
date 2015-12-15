@@ -2,11 +2,11 @@ angular.module('admin')
     .controller('OfferController', ['$scope', '$http', 'SettingService', '$modal', function ($scope, $http, SettingService, $modal) {
         $scope.jobInformation = {};
 
-        $scope.saveMessage = function (info) {
+        $scope.saveOffer = function (info) {
             var modalInstance = $modal.open({
                 animation: true,
-                templateUrl: 'app/admin/template/modals/confirm-message.html',
-                controller: 'ModalWelcomeController',
+                templateUrl: 'app/admin/template/modals/add-offer-modal.html',
+                controller: 'AddOfferController',
                 size: 'md',
                 resolve: {
                     response: function () {
@@ -17,9 +17,12 @@ angular.module('admin')
 
             modalInstance.result.then(function (result) {
                 if (result === "submit"){
-                    $scope.message = {};
+                    $scope.jobInformation = {};
                 }
             })
         };
+        $scope.clearMessage = function () {
+            $scope.jobInformation = {};
+        }
     }]);
 

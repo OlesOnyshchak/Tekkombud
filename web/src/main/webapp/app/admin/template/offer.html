@@ -8,6 +8,8 @@
 <div class="row">
     <form id="contact-form">
 
+        <h2>Add an offer</h2>
+
         <div class="row">
             <div class="col-md-3">
                 <div class="form-group">
@@ -28,7 +30,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="job skills" ng-model="jobInformation.skill">
+                    <input type="text" class="form-control" placeholder="job skills" ng-model="jobInformation.skills">
                 </div>
             </div>
         </div>
@@ -42,7 +44,8 @@
         </div>
 
         <div class="col-md-12">
-            <button type="submit" class="btn btn-success submit-button" ng-click="saveMessage(message)">submit</button>
+            <button type="submit" class="btn btn-success submit-button" ng-click="saveOffer(jobInformation)">submit
+            </button>
             <button type="submit" class="btn btn-warning decline-button" ng-click="clearMessage()">clear</button>
         </div>
 

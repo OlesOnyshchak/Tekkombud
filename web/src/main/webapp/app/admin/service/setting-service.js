@@ -15,6 +15,11 @@ angular.module('admin')
                 return $http.delete('delete-message/'+ id).then(function (response) {
                     console.log("ok");
                 });
+            },
+            saveOffer: function (offer) {
+                return $http.post('add-offer', offer).success(function (data) {
+                    console.log("ok");
+                });
             }
         }
     }]);
