@@ -17,17 +17,13 @@ angular.module('admin')
                 animation: true,
                 templateUrl: 'app/admin/template/modals/confirm-modal.html',
                 controller: 'ModalMessageController',
-                size: 'md',
-                resolve: {
-                    response: function () {
-                        return id;
-                    }
-                }
+                size: 'md'
             });
 
             modalInstance.result.then(function (result) {
-                console.log(result);
-                if (result === "submit"){
+                if (result == 'submit'){
+                    SettingService.deleteMessageById(id);
+                    getMessages();
                     getMessages();
                 }
             });
