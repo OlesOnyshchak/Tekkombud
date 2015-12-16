@@ -129,6 +129,15 @@ ul li ul.dropdown li{
 .center{
     padding-left: 20%;
 }
+.glyphicon-plus{
+    color: green;
+}
+.add-offer-header{
+    padding-left: 25%;
+}
+.offer-pagination-header{
+    padding-left: 35%;
+}
 
 
 
