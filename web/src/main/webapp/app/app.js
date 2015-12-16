@@ -1,4 +1,4 @@
-var module = angular.module('app', ['spring-security-csrf-token-interceptor', 'ui.router','ngMap','ui.bootstrap']);
+var module = angular.module('app', ['spring-security-csrf-token-interceptor', 'ui.router','ngMap','ui.bootstrap','angularUtils.directives.dirPagination']);
 
 module.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
@@ -19,10 +19,12 @@ module.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, 
         })
         .state('project', {
             url:'/project',
-            templateUrl: 'app/welcome/template/project.html'
+            templateUrl: 'app/welcome/template/project.html',
+            controller: 'WelcomeController'
         })
         .state('offer', {
             url:'/offer',
-            templateUrl: 'app/welcome/template/offer.html'
+            templateUrl: 'app/welcome/template/offer.html',
+            controller: 'WelcomeController'
         })
 }]);

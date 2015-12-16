@@ -10,6 +10,11 @@ angular.module('app')
                 return $http.post('message', reg).success(function (data) {
                     console.log("ok");
                 });
+            },
+            getAllOffers: function () {
+                return $http.get('offers-welcome').then(function (response) {
+                    return response.data;
+                });
             }
         }
     }]);

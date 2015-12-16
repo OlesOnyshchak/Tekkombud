@@ -1,34 +1,24 @@
-package com.tekkombud.application.entity;
+package com.tekkombud.application.controller.dto;
 
 import com.tekkombud.application.entity.util.OfferStatus;
 
 import javax.persistence.*;
 
-@Entity
-public class Offer {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column
+public class OfferDTO {
+
     private String name;
-    @Column
     private String description;
-    @Column
     private String skills;
-    @Column
     private String salary;
-    @Enumerated(value = EnumType.STRING)
-    private OfferStatus offerStatus;
 
-    public Offer() {
+    public OfferDTO() {
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+    public OfferDTO(String name, String description, String skills, String salary) {
+        this.name = name;
+        this.description = description;
+        this.skills = skills;
+        this.salary = salary;
     }
 
     public String getName() {
@@ -63,23 +53,13 @@ public class Offer {
         this.salary = salary;
     }
 
-    public OfferStatus getOfferStatus() {
-        return offerStatus;
-    }
-
-    public void setOfferStatus(OfferStatus offerStatus) {
-        this.offerStatus = offerStatus;
-    }
-
     @Override
     public String toString() {
-        return "Offer{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
+        return "OfferDTO{" +
+                "name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", skills='" + skills + '\'' +
                 ", salary='" + salary + '\'' +
-                ", offerStatus=" + offerStatus +
                 '}';
     }
 }

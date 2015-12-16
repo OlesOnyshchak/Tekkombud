@@ -57,8 +57,14 @@
         </form>
     </div>
     <div class="col-md-9">
-
         <h2 class="offer-pagination-header">All offers</h2>
+
+        <form class="form-inline">
+            <div class="form-group">
+                <label>Search</label>
+                <input type="text" ng-model="search" class="form-control" placeholder="Search">
+            </div>
+        </form>
         <table class="table table-striped table-hover">
             <thead>
             <tr>
@@ -100,15 +106,16 @@
                     <a ng-click="info(jobInfo)" title="Click to get detailed information"><i
                             class="glyphicon glyphicon-plus"></i></a>
                 </td>
-
             </tr>
             </tbody>
         </table>
-        <dir-pagination-controls
-                max-size="5"
-                direction-links="true"
-                boundary-links="true">
-        </dir-pagination-controls>
+        <div class="pagination-controls">
+            <dir-pagination-controls
+                    max-size="5"
+                    direction-links="true"
+                    boundary-links="true">
+            </dir-pagination-controls>
+        </div>
     </div>
 </div>
 </body>

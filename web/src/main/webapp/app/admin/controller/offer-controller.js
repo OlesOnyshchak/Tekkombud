@@ -18,8 +18,10 @@ angular.module('admin')
             modalInstance.result.then(function (result) {
                 if (result === "submit"){
                     $scope.jobInformation = {};
+                    getOffers();
                 }
-            })
+            });
+            getOffers();
         };
 
         $scope.clearMessage = function () {
@@ -28,7 +30,6 @@ angular.module('admin')
 
         function getOffers() {
             SettingService.getAllOffers().then(function (data) {
-                console.log(data);
                 $scope.jobInfo = data;
 
             });

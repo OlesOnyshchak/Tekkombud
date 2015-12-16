@@ -14,4 +14,6 @@ angular.module('employee')
             console.log(reg);
             SettingService.create(reg);
         };
+
+
     }]);
