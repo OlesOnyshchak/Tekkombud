@@ -1,7 +1,6 @@
 angular.module('admin')
     .controller('MessageController', ['$scope', '$http', 'SettingService','$modal', function ($scope, $http, SettingService,$modal) {
         function getMessages() {
-            $scope.messages = {};
 
             SettingService.getAll().then(function (data) {
                 $scope.messages = data;
