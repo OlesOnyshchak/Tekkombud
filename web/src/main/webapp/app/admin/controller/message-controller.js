@@ -1,9 +1,10 @@
 angular.module('admin')
     .controller('MessageController', ['$scope', '$http', 'SettingService','$modal', function ($scope, $http, SettingService,$modal) {
         function getMessages() {
+            $scope.messages = {};
+
             SettingService.getAll().then(function (data) {
                 $scope.messages = data;
-
             });
 
             $scope.sort = function(keyname){
@@ -12,6 +13,7 @@ angular.module('admin')
             }
         }
         getMessages();
+
         $scope.delete = function(id){
             var modalInstance = $modal.open({
                 animation: true,
@@ -23,7 +25,6 @@ angular.module('admin')
             modalInstance.result.then(function (result) {
                 if (result == 'submit'){
                     SettingService.deleteMessageById(id);
-                    getMessages();
                     getMessages();
                 }
             });

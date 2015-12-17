@@ -1,7 +1,6 @@
 angular.module('admin')
     .controller('SettingController', ['$scope', '$http','SettingService', function ($scope, $http, SettingService) {
         $scope.logout = function () {
-            console.log("ok");
             $http({
                 method: 'POST',
                 url: '/logout'

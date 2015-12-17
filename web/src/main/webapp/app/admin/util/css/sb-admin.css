@@ -13,17 +13,6 @@ body {
     padding-left: 0;
 }
 
-
-@media(min-width:768px) {
-    #wrapper {
-        padding-left: 225px;
-    }
-
-    #page-wrapper {
-        padding: 10px;
-    }
-}
-
 ul{
     padding: 0;
     list-style: none;
@@ -74,73 +63,29 @@ ul li ul.dropdown li{
     display: block;
 }
 
-
-/* Side Navigation */
-
-@media(min-width:768px) {
-    .side-nav {
-        position: fixed;
-        top: 51px;
-        left: 225px;
-        width: 225px;
-        bottom: 400px;
-        margin-left: -225px;
-        border-radius: 0;
-        overflow-y: auto;
-        background-color: rgba(237, 237, 237, 0.5); //
-        bottom: 0;
-        overflow-x: hidden;
-        padding-bottom: 40px;
-    }
-
-    .side-nav>li>a {
-        width: 225px;
-
-    }
-    .navbar,.navbar-inverse,.navbar-fixed-top{
-        background-color: rgba(237, 237, 237, 0.5); //
-        border: none;
-    }
-
-    .side-nav li a:hover,
-    .side-nav li a:focus {
-        outline: none;
-        background-color: white;
-    }
-}
-
-.side-nav>li>ul {
-    padding: 0;
-}
-
-.email-modal{
-    padding-left: 20%;
-}
-.glyphicon-minus{
-    color: red !important;
-}
-
-.side-nav>li>ul>li>a {
-    display: block;
-    padding: 10px 15px 10px 38px;
-    text-decoration: none;
-    color: white;
-}
-.center{
-    padding-left: 20%;
-}
 .glyphicon-plus{
     color: green;
 }
-.add-offer-header{
-    padding-left: 25%;
-}
-.offer-pagination-header{
-    padding-left: 35%;
-}
 
 .pagination-controls{
-    padding-left: 35%;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+.glyphicon-wrench{
+    color: green !important;
+}
+
+.add-offer{
+
 }
 
 

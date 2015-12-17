@@ -2,6 +2,15 @@ angular.module('admin')
     .controller('OfferController', ['$scope', '$http', 'SettingService', '$modal', function ($scope, $http, SettingService, $modal) {
         $scope.jobInformation = {};
 
+        $scope.addOffer = function(){
+            var modalInstance = $modal.open({
+                animation: true,
+                templateUrl: 'app/admin/template/modals/add-offer-modal.html',
+                controller: 'AddOfferController',
+                size: 'md'
+            });
+        };
+
         $scope.saveOffer = function (info) {
             var modalInstance = $modal.open({
                 animation: true,
