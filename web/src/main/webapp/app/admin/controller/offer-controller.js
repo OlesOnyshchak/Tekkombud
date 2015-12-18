@@ -11,11 +11,8 @@ angular.module('admin')
                 size: 'md'
             });
             modalInstance.result.then(function (result) {
-                console.log("ok");
                 $scope.jobInfo = result;
-                console.log(    $scope.jobInfo);
                 getOffers();
-                console.log("ok");
             });
         };
         getOffersData();
@@ -33,6 +30,23 @@ angular.module('admin')
                 $scope.sortKey = keyname;   //set the sortKey to the param passed
                 $scope.reverse = !$scope.reverse; //if true make it false and vice versa
             }
+        }
+
+        $scope.offerInfo = function (offerInfo) {
+            var modalInstance = $modal.open({
+                animation: true,
+                templateUrl: 'app/admin/template/modals/info-offer-modal.html',
+                controller: 'InfoOfferController',
+                size: 'lg',
+                resolve: {
+                    response: function () {
+                        return offerInfo;
+                    }
+                }
+            });
+            modalInstance.result.then(function (result) {
+
+            });
         }
 
     }]);
