@@ -15,6 +15,11 @@ angular.module('app')
                 return $http.get('offers-welcome').then(function (response) {
                     return response.data;
                 });
+            },
+            update: function (reg, url) {
+                return $http.put(url + 1, reg).success(function (data) {
+                    console.log("ok");
+                });
             }
         }
     }]);

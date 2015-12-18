@@ -1,11 +1,8 @@
 package com.tekkombud.application.controller.dto;
 
-import com.tekkombud.application.entity.util.OfferStatus;
-
-import javax.persistence.*;
-
 public class OfferDTO {
 
+    private Long id;
     private String name;
     private String description;
     private String skills;
@@ -14,11 +11,20 @@ public class OfferDTO {
     public OfferDTO() {
     }
 
-    public OfferDTO(String name, String description, String skills, String salary) {
+    public OfferDTO(Long id, String name, String description, String skills, String salary) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.skills = skills;
         this.salary = salary;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {

@@ -10,6 +10,9 @@
 <table class="table table-striped table-hover">
     <thead>
     <tr>
+        <th ng-click="sort('id')">Id <span class="glyphicon sort-icon" ng-show="sortKey=='id'"
+                                           ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+        </th>
         <th ng-click="sort('name')">Name <span class="glyphicon sort-icon" ng-show="sortKey=='name'"
                                                ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
         </th>
@@ -28,6 +31,7 @@
     </thead>
     <tbody>
     <tr dir-paginate="info in offerInfo|orderBy:sortKey:reverse|itemsPerPage:5">
+        <td>{{info.id}}</td>
         <td>{{info.name}}</td>
         <td>{{info.description}}</td>
         <td>{{info.skills}}</td>
@@ -35,8 +39,9 @@
         <td>
             <a ng-click="info(jobInfo)" title="Click to get detailed information"><i
                     class="glyphicon glyphicon-info-sign"></i></a>
-            <a ng-click="info(jobInfo)" title="Click to get detailed information"><i
-                    class="glyphicon glyphicon-plus"></i></a>
+            <a ng-click="attachCV(jobInfo)" title="Click to get detailed information"><i
+                    class="glyphicon glyphicon-plus"></i>
+            </a>
         </td>
     </tr>
     </tbody>

@@ -40,6 +40,6 @@ public class AdminController {
 
     @RequestMapping(value = "offers", method = RequestMethod.GET)
     public List<Offer> getAllOffer() {
-        return offerService.getAllMessage();
+        return offerService.getAllOffer();
     }
 }

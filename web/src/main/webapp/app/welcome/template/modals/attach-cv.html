@@ -1,0 +1,54 @@
+<form class="form-group">
+
+    <div class="modal-header">
+        <h3 class="modal-title">Please fill the form</h3>
+    </div>
+
+    <div class="modal-body">
+        <form>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <input type="text" class="form-control" placeholder="First Name" ng-model="employeeInfo.firstName"
+                           required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <input type="text" class="form-control" placeholder="Last Name" ng-model="employeeInfo.lastName"
+                           required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <input type="text" class="form-control" placeholder="Phone number"
+                           ng-model="employerInfo.phoneNumber"
+                           required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <input type="text" class="form-control" placeholder="Email" ng-model="employeeInfo.email"
+                           required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <textarea type="text" class="form-control" placeholder="Description"
+                                  ng-model="employeeInfo.description"></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal-footer form-group">
+
+        <button class="btn btn-danger pull-right" type="button" ng-click="cancel()">
+            cancel
+        </button>
+        <button class="btn btn-success pull-right submit" type="submit" ng-click="submit(employeeInfo)">
+            submit
+        </button>
+    </div>
+</form>

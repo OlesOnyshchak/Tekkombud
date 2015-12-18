@@ -3,6 +3,8 @@ package com.tekkombud.application.entity;
 import com.tekkombud.application.entity.util.OfferStatus;
 
 import javax.persistence.*;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 public class Offer {
@@ -17,10 +19,24 @@ public class Offer {
     private String skills;
     @Column
     private String salary;
+
     @Enumerated(value = EnumType.STRING)
     private OfferStatus offerStatus;
 
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "offer_id")
+    private Set<CV> cvList;
+
     public Offer() {
+    }
+
+
+    public Set<CV> getCvList() {
+        return cvList;
+    }
+
+    public void setCvList(Set<CV> cvList) {
+        this.cvList = cvList;
     }
 
     public Long getId() {

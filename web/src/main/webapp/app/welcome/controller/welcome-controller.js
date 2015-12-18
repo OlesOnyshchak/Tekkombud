@@ -39,5 +39,21 @@ angular.module('app')
                 $scope.reverse = !$scope.reverse; //if true make it false and vice versa
             }
         }
+
+        $scope.attachCV = function (id) {
+            var modalInstance = $modal.open({
+                animation: true,
+                templateUrl: 'app/welcome/template/modals/attach-cv.html',
+                controller: 'AttachCVController',
+                size: 'md',
+                resolve: {
+                    response: function () {
+                        return id;
+                    }
+                }
+            });
+        };
+
+
         getOffers();
     }]);
