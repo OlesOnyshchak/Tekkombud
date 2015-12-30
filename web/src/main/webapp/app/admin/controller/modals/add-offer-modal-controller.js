@@ -9,10 +9,8 @@ angular
         };
 
         $scope.submit = function (info) {
-            SettingService.saveOffer(info);
-            SettingService.getAllOffers().then(function (data) {
-                console.log(data);
-                $modalInstance.close(data);
+            SettingService.saveOffer(info).then(function () {
+                $modalInstance.close();
             });
         };
     }]);

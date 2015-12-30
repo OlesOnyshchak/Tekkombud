@@ -44,4 +44,11 @@ public class OfferServiceImpl implements OfferService {
         crudRepository.setObjectClass(Offer.class);
         crudRepository.update(offer);
     }
+
+    @Override
+    @Transactional
+    public void delete(Long id) {
+        crudRepository.setObjectClass(Offer.class);
+        crudRepository.delete(id);
+    }
 }

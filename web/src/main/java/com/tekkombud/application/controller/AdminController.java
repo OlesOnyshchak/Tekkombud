@@ -31,6 +31,11 @@ public class AdminController {
         messengerService.delete(id);
     }
 
+    @RequestMapping(value = "delete-offer/{id}", method = RequestMethod.DELETE)
+    public void deleteOfferById(@PathVariable("id") Integer id) {
+        offerService.delete(Long.valueOf(id));
+    }
+
     @RequestMapping(value = "add-offer", method = RequestMethod.POST)
     public void addOffer(@RequestBody Offer offer) {
         System.out.println(offer.getName());

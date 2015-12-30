@@ -10,9 +10,8 @@ angular.module('admin')
                 controller: 'AddOfferController',
                 size: 'md'
             });
-            modalInstance.result.then(function (result) {
-                $scope.jobInfo = result;
-                getOffers();
+            modalInstance.result.then(function () {
+                getOffersData();
             });
         };
         getOffersData();
@@ -20,17 +19,32 @@ angular.module('admin')
         function getOffersData() {
             SettingService.getAllOffers().then(function (data) {
                 $scope.jobInfo = data;
-                getOffers();
+                $scope.sort = function (keyname) {
+                    $scope.sortKey = keyname;   //set the sortKey to the param passed
+                    $scope.reverse = !$scope.reverse; //if true make it false and vice versa
+                }
             });
 
         }
 
-        function getOffers() {
-            $scope.sort = function (keyname) {
-                $scope.sortKey = keyname;   //set the sortKey to the param passed
-                $scope.reverse = !$scope.reverse; //if true make it false and vice versa
-            }
-        }
+        $scope.delete = function (id) {
+            console.log(id);
+            var modalInstance = $modal.open({
+                animation: true,
+                templateUrl: 'app/admin/template/modals/delete-offer-modal.html',
+                controller: 'DeleteOfferController',
+                size: 'md',
+                resolve: {
+                    response: function () {
+                        return id;
+                    }
+                }
+
+            });
+            modalInstance.result.then(function (result) {
+                getOffersData();
+            });
+        };
 
         $scope.offerInfo = function (offerInfo) {
             var modalInstance = $modal.open({

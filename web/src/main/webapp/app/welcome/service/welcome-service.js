@@ -17,7 +17,7 @@ angular.module('app')
                 });
             },
             update: function (reg, url) {
-                return $http.put(url + 1, reg).success(function (data) {
+                return $http.put(url, reg).success(function (data) {
                     console.log("ok");
                 });
             }
