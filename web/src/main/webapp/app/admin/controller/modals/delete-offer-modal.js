@@ -5,9 +5,9 @@ angular
 
         $scope.submit = function () {
             console.log($scope.id);
-            SettingService.deleteOfferById($scope.id);
-            /*     setTimeout(function(){$modalInstance.close();},3000);*/
-            $modalInstance.close();
+            SettingService.deleteOfferById($scope.id).then(function () {
+                $modalInstance.close();
+            });
         };
 
         $scope.cancel = function () {
