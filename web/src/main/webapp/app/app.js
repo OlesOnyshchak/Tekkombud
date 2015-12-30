@@ -1,5 +1,4 @@
 var module = angular.module('app', ['spring-security-csrf-token-interceptor', 'ui.router','ngMap','ui.bootstrap','angularUtils.directives.dirPagination']);
-
 module.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
 

@@ -1,8 +1,6 @@
 angular.module('admin')
     .controller('OfferController', ['$scope', '$http', 'SettingService', '$modal', function ($scope, $http, SettingService, $modal) {
 
-
-
         $scope.addOffer = function () {
             var modalInstance = $modal.open({
                 animation: true,
@@ -28,7 +26,6 @@ angular.module('admin')
         }
 
         $scope.delete = function (id) {
-            console.log(id);
             var modalInstance = $modal.open({
                 animation: true,
                 templateUrl: 'app/admin/template/modals/delete-offer-modal.html',

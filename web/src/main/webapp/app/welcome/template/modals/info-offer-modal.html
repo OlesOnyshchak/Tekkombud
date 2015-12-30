@@ -1,0 +1,37 @@
+<form class="form-group">
+
+    <div class="modal-header">
+        <h3 class="modal-title">Detailed message information</h3>
+    </div>
+
+    <div class="modal-body">
+        <form>
+            <div class="col-md-offset-1">
+                <div class="row">
+                    <label>First name: </label>{{info.name}}
+                </div>
+            </div>
+            <div class="col-md-offset-1">
+                <div class="row">
+                    <label class="email-modal">Description: </label>{{info.description}}
+                </div>
+            </div>
+            <div class="col-md-offset-1">
+                <div class="row">
+                    <label>Skills: </label>{{info.skills}}
+                </div>
+            </div>
+            <div class="col-md-offset-1">
+                <div class="row">
+                    <label>Salary: </label>{{info.salary}}
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal-footer form-group">
+        <button class="btn btn-danger pull-right" type="button" ng-click="cancel()">
+            cancel
+        </button>
+    </div>
+</form>

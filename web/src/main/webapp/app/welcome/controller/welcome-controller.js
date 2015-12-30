@@ -30,8 +30,6 @@ angular.module('app')
         function getOffers() {
             WelcomeService.getAllOffers().then(function (data) {
                 $scope.offerInfo = data;
-                console.log( $scope.offerInfo);
-
             });
 
             $scope.sort = function(keyname){
@@ -54,6 +52,19 @@ angular.module('app')
             });
         };
 
-
         getOffers();
+
+        $scope.information = function (info) {
+            var modalInstance = $modal.open({
+                animation: true,
+                templateUrl: 'app/welcome/template/modals/info-offer-modal.html',
+                controller: 'InfoOfferController',
+                size: 'md',
+                resolve: {
+                    response: function () {
+                        return info;
+                    }
+                }
+            });
+        }
     }]);

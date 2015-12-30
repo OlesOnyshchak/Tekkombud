@@ -1,5 +1,5 @@
 package com.tekkombud.application.entity.util;
 
 public enum OfferStatus {
-    RESPONDED,ACTIVE;
+    RESPONDED, ACTIVE, CLOSED;
 }
