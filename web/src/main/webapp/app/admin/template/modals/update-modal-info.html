@@ -1,0 +1,67 @@
+<form class="form-group">
+
+    <div class="modal-header">
+        <h3 class="modal-title">Form update</h3>
+    </div>
+    <div class="modal-body">
+        <form id="contact-form">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="job name" ng-model="info.name">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <textarea type="text" class="form-control" placeholder="job description"
+                                  ng-model="info.description"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="job skills"
+                               ng-model="info.offerStatus">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="job salary"
+                               ng-model="info.salary">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="job salary"
+                               ng-model="info.skills">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal-footer form-group">
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-success submit-button" ng-click="submit(info)">
+                    submit
+                </button>
+
+                <button type="submit" class="btn btn-danger decline-button" ng-click="cancel()">
+                    cancel
+                </button>
+            </div>
+
+        </div>
+    </div>
+</form>

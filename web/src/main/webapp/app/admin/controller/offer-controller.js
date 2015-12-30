@@ -55,8 +55,19 @@ angular.module('admin')
                     }
                 }
             });
-            modalInstance.result.then(function (result) {
+        };
 
+        $scope.update = function (offerInfo) {
+            var modalInstance = $modal.open({
+                animation: true,
+                templateUrl: 'app/admin/template/modals/update-modal-info.html',
+                controller: 'UpdateOfferController',
+                size: 'md',
+                resolve: {
+                    response: function () {
+                        return offerInfo;
+                    }
+                }
             });
         }
 

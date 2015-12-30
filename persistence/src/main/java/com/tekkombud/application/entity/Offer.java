@@ -96,6 +96,7 @@ public class Offer {
                 ", skills='" + skills + '\'' +
                 ", salary='" + salary + '\'' +
                 ", offerStatus=" + offerStatus +
+                ", cvList=" + cvList +
                 '}';
     }
 }

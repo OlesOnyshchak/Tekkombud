@@ -23,6 +23,11 @@ angular.module('admin')
                     return response.data;
                 });
             },
+            updateOffer: function (offer) {
+                return $http.put('update-offer', offer).then(function (response) {
+                    return response.data;
+                });
+            },
             getAllOffers: function () {
                 return $http.get('offers').then(function (response) {
                     return response.data;

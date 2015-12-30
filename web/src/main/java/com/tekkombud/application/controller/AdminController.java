@@ -9,6 +9,7 @@ import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
@@ -38,9 +39,13 @@ public class AdminController {
 
     @RequestMapping(value = "add-offer", method = RequestMethod.POST)
     public void addOffer(@RequestBody Offer offer) {
-        System.out.println(offer.getName());
         offer.setOfferStatus(OfferStatus.ACTIVE);
         offerService.save(offer);
+    }
+
+    @RequestMapping(value = "update-offer", method = RequestMethod.PUT)
+    public void updateOffer(@RequestBody Offer offer) {
+        offerService.update(offer);
     }
 
     @RequestMapping(value = "offers", method = RequestMethod.GET)
