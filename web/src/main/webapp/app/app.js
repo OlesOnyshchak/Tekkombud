@@ -6,49 +6,7 @@ module.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', fun
         suffix: '.json'
     });
 
-    $translateProvider.preferredLanguage('ukr');
-
-    /*$translateProvider.translations('en', {
-        'Home': 'Home',
-        'Projects': 'Projects',
-        'Offers': 'Offers',
-        'Contact': 'Contact',
-     'lang': "en",
-     'Tekkombud': "Tekkombud",
-     'Sign in':"Sign in",
-     'username':"username",
-     'password':"password",
-     'Our offers':"Our offers",
-     'Id':"Id",
-     'Name':"Name",
-     'Description':"Description",
-     'Skills':"Skills",
-     'Salary':"Salary",
-     'Manipulation':"Manipulation"
-
-
-     });
-
-    $translateProvider.translations('ukr', {
-        'Home': 'Домашня',
-        'Projects': 'Проекти',
-        'Offers': 'Вакансії',
-        'Contact': 'Контакти',
-     'lang': "укр",
-     'Tekkombud': "Теккомбуд",
-     'Sign in':"Увійти",
-     'username':"логін",
-     'password':"пароль",
-     'Our offers':"Наші вакансії",
-     'Id':"Порядковий номер",
-     'Name':"Ім'я",
-     'Description':"Опис",
-     'Skills':"Навички",
-     'Salary':"Зарплата",
-     'Manipulation':"Дії"
-    });
-
-     $translateProvider.preferredLanguage('en');*/
+    $translateProvider.preferredLanguage('eng');
 
     $urlRouterProvider.otherwise('/');
 
