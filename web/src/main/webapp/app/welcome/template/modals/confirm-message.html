@@ -1,7 +1,7 @@
-<form class="form-group">
+<form class="form-group" ng-controller="NavigationController">
 
     <div class="modal-header">
-        <h3 class="modal-title">Are you sure you want to send a message?</h3>
+        <h3 class="modal-title">{{'Message modal title' | translate }}</h3>
     </div>
 
     <div class="modal-body">
@@ -9,32 +9,33 @@
             <div class="col-md-6 form-group">
                 <div class="row">
                     <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" placeholder="First Name" ng-model="info.name" required>
+                        <input type="text" class="form-control" placeholder="{{'name' | translate }}"
+                               ng-model="info.name" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" placeholder="Email" ng-model="info.email" ng-valid-email
+                        <input type="text" class="form-control" placeholder="{{'email' | translate }}"
+                               ng-model="info.email" ng-valid-email
                                required>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 form-group">
-                <textarea type="text" class="form-control" placeholder="message" ng-model="info.text"
+                <textarea type="text" class="form-control" placeholder="{{'message' | translate }}" ng-model="info.text"
                           required></textarea>
             </div>
             <div class="row"></div>
-            <div>Form is valid {{messageForm.$valid}}</div>
         </form>
     </div>
 
     <div class="modal-footer form-group">
         <button class="btn btn-success pull-left" type="submit" ng-click="submit()">
-            yes
+            {{'YES' | translate }}
         </button>
 
         <button class="btn btn-danger pull-right" type="button" ng-click="cancel()">
-            no
+            {{'NO' | translate }}
         </button>
     </div>
 </form>

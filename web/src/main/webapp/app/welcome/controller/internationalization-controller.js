@@ -12,6 +12,7 @@ angular
                     key: 'ukr',
                     name: "Українська"
                 }];
+
             $scope.changeLanguage = function (key) {
                 $translate.use(key);
             };

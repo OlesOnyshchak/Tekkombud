@@ -29,6 +29,7 @@
 .container-fluid{
     margin-top: 50px;
 }
+
 #gmaps {
     width: 450px;
     height: 450px;
@@ -49,4 +50,8 @@
 
 .submit {
     margin-right: 2%;
+}
+
+h3 {
+    text-align: center;
 }

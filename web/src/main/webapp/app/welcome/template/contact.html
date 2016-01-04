@@ -10,8 +10,7 @@
 </div>
 <div class="row">
     <div class="note">
-        <p>{{'Contact ' | translate }}We are here to answer any questions you may have.
-            Reach out to us and we'll respond as soon as we can.</p>
+        <p>{{'Contact note' | translate }}</p>
     </div>
 </div>
 
@@ -21,43 +20,48 @@
         <div class="col-md-6">
             <div class="col-md-6">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="name" ng-model="message.name">
+                    <input type="text" class="form-control" placeholder="{{'name' | translate }}"
+                           ng-model="message.name">
                 </div>
             </div>
 
             <div class="col-md-6">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="email" ng-model="message.email">
+                    <input type="text" class="form-control" placeholder="{{'email' | translate }}"
+                           ng-model="message.email">
                 </div>
             </div>
 
             <div class="col-md-12">
                 <div class="form-group">
-                        <textarea type="text" class="form-control" placeholder="message"
+                        <textarea type="text" class="form-control" placeholder="{{'message' | translate }}"
                                   ng-model="message.text"></textarea>
                 </div>
             </div>
 
             <div class="col-md-12">
-                <button type="submit" class="btn btn-success submit-button" ng-click="saveMessage(message)">submit
+                <button type="submit" class="btn btn-success submit-button" ng-click="saveMessage(message)">{{'submit' |
+                    translate }}
                 </button>
-                <button type="submit" class="btn btn-warning decline-button" ng-click="clearMessage()">clear</button>
+                <button type="submit" class="btn btn-warning decline-button" ng-click="clearMessage()">{{'clear' |
+                    translate }}
+                </button>
             </div>
         </div>
 
         <aside id="contact-info" class="col-md-2">
             <dl>
-                <dt>Email</dt>
+                <dt>{{'Email' | translate }}</dt>
                 <dd><a href="mailto:oles1719@gmail.com" title="Click to send us an email">oles1719@gmail.com</a>
                 </dd>
-                <dt>Phone number</dt>
+                <dt>{{'Phone number' | translate }}</dt>
                 <dd><a href="tel:0931964495" title="Click to call us">0931964495</a></dd>
-                <dt>Skype</dt>
+                <dt>{{'Skype' | translate }}</dt>
                 <dd><a href="skype:onyshchakoles?call" title="Click to call us on Skype">onyshchakoles</a></dd>
-                <dt>Address</dt>
+                <dt>{{'Address' | translate }}</dt>
                 <dd>
                     <address>
-                        Lazarenka street.Ukraine
+                        {{'Lazarenka street.Ukraine' | translate }}
                     </address>
                 </dd>
             </dl>

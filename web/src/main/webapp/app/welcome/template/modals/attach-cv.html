@@ -1,40 +1,43 @@
 <form class="form-group">
 
     <div class="modal-header">
-        <h3 class="modal-title">Please fill the form</h3>
+        <h3 class="modal-title">{{'Please fill the form' | translate }}</h3>
     </div>
 
     <div class="modal-body">
         <form>
             <div class="row">
                 <div class="col-md-12 form-group">
-                    <input type="text" class="form-control" placeholder="First Name" ng-model="employeeInfo.firstName"
+                    <input type="text" class="form-control" placeholder="{{'first name' | translate }}"
+                           ng-model="employeeInfo.firstName"
                            required>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 form-group">
-                    <input type="text" class="form-control" placeholder="Last Name" ng-model="employeeInfo.lastName"
+                    <input type="text" class="form-control" placeholder="{{'last name' | translate }}"
+                           ng-model="employeeInfo.lastName"
                            required>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 form-group">
-                    <input type="text" class="form-control" placeholder="Phone number"
+                    <input type="text" class="form-control" placeholder="{{'phone number' | translate }}"
                            ng-model="employerInfo.phoneNumber"
                            required>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 form-group">
-                    <input type="text" class="form-control" placeholder="Email" ng-model="employeeInfo.email"
+                    <input type="text" class="form-control" placeholder="{{'email' | translate }}"
+                           ng-model="employeeInfo.email"
                            required>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <textarea type="text" class="form-control" placeholder="Description"
+                        <textarea type="text" class="form-control" placeholder="description"
                                   ng-model="employeeInfo.description"></textarea>
                     </div>
                 </div>
@@ -45,10 +48,10 @@
     <div class="modal-footer form-group">
 
         <button class="btn btn-danger pull-right" type="button" ng-click="cancel()">
-            cancel
+            {{'cancel' | translate }}
         </button>
         <button class="btn btn-success pull-right submit" type="submit" ng-click="submit(employeeInfo)">
-            submit
+            {{'submit' | translate }}
         </button>
     </div>
 </form>
