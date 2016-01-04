@@ -3,78 +3,76 @@
 </head>
 
 <body>
-<div class="container-fluid">
-
-    <div class="row">
-        <div class="contact">
-            <h1>Contact us</h1>
-        </div>
+<div class="row">
+    <div class="contact">
+        <h1>Contact us</h1>
     </div>
-    <div class="row">
-        <div class="note">
-            <p>We are here to answer any questions you may have about our experiences.
-                Reach out to us and we'll respond as soon as we can.</p>
-        </div>
+</div>
+<div class="row">
+    <div class="note">
+        <p>We are here to answer any questions you may have about our experiences.
+            Reach out to us and we'll respond as soon as we can.</p>
     </div>
+</div>
 
-    <div class="row">
-        <form id="contact-form">
+<div class="row">
+    <form id="contact-form">
+
+        <div class="col-md-6">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="name" ng-model="message.name">
+                </div>
+            </div>
 
             <div class="col-md-6">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="name" ng-model="message.name">
-                    </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="email" ng-model="message.email">
                 </div>
+            </div>
 
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="email" ng-model="message.email">
-                    </div>
-                </div>
-
-                <div class="col-md-12">
-                    <div class="form-group">
+            <div class="col-md-12">
+                <div class="form-group">
                         <textarea type="text" class="form-control" placeholder="message"
                                   ng-model="message.text"></textarea>
-                    </div>
-                </div>
-
-                <div class="col-md-12">
-                    <button type="submit" class="btn btn-success submit-button" ng-click="saveMessage(message)">submit</button>
-                    <button type="submit" class="btn btn-warning decline-button" ng-click="clearMessage()">clear</button>
                 </div>
             </div>
 
-            <aside id="contact-info" class="col-md-2">
-                <dl>
-                    <dt>Email</dt>
-                    <dd><a href="mailto:oles1719@gmail.com" title="Click to send us an email">oles1719@gmail.com</a>
-                    </dd>
-                    <dt>Phone number</dt>
-                    <dd><a href="tel:0931964495" title="Click to call us">0931964495</a></dd>
-                    <dt>Skype</dt>
-                    <dd><a href="skype:onyshchakoles?call" title="Click to call us on Skype">onyshchakoles</a></dd>
-                    <dt>Address</dt>
-                    <dd>
-                        <address>
-                            Lazarenka street.Ukraine
-                        </address>
-                    </dd>
-                </dl>
-            </aside>
-
-            <div class="col-md-4">
-                <ng-map zoom="11" center="[52.229902, 21.010827]">
-                    <marker position="[52.229902, 21.010827]"/>
-                    <shape name="circle" radius="400" center="[52.229902, 21.010827]" radius="4000"/>
-                    <control name="overviewMap" opened="true"/>
-                </ng-map>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-success submit-button" ng-click="saveMessage(message)">submit
+                </button>
+                <button type="submit" class="btn btn-warning decline-button" ng-click="clearMessage()">clear</button>
             </div>
-        </form>
-    </div>
+        </div>
 
+        <aside id="contact-info" class="col-md-2">
+            <dl>
+                <dt>Email</dt>
+                <dd><a href="mailto:oles1719@gmail.com" title="Click to send us an email">oles1719@gmail.com</a>
+                </dd>
+                <dt>Phone number</dt>
+                <dd><a href="tel:0931964495" title="Click to call us">0931964495</a></dd>
+                <dt>Skype</dt>
+                <dd><a href="skype:onyshchakoles?call" title="Click to call us on Skype">onyshchakoles</a></dd>
+                <dt>Address</dt>
+                <dd>
+                    <address>
+                        Lazarenka street.Ukraine
+                    </address>
+                </dd>
+            </dl>
+        </aside>
+
+        <div class="col-md-4">
+            <ng-map zoom="11" center="[52.229902, 21.010827]">
+                <marker position="[52.229902, 21.010827]"/>
+                <shape name="circle" radius="400" center="[52.229902, 21.010827]" radius="4000"/>
+                <control name="overviewMap" opened="true"/>
+            </ng-map>
+        </div>
+    </form>
 </div>
+
 
 </body>
 

@@ -5,7 +5,7 @@
     </div>
 
     <div class="modal-body">
-        <form>
+        <form name="messageForm" novalidate>
             <div class="col-md-6 form-group">
                 <div class="row">
                     <div class="col-md-12 form-group">
@@ -14,7 +14,8 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" placeholder="Last Name" ng-model="info.email" required>
+                        <input type="text" class="form-control" placeholder="Email" ng-model="info.email" ng-valid-email
+                               required>
                     </div>
                 </div>
             </div>
@@ -23,15 +24,16 @@
                           required></textarea>
             </div>
             <div class="row"></div>
+            <div>Form is valid {{messageForm.$valid}}</div>
         </form>
     </div>
 
     <div class="modal-footer form-group">
-        <button class="btn btn-success pull-left" type="submit" ng-click = "submit()">
+        <button class="btn btn-success pull-left" type="submit" ng-click="submit()">
             yes
         </button>
 
-        <button class="btn btn-danger pull-right" type="button" ng-click = "cancel()">
+        <button class="btn btn-danger pull-right" type="button" ng-click="cancel()">
             no
         </button>
     </div>

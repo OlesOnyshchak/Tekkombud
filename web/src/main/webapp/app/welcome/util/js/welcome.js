@@ -1,6 +1,6 @@
 $(document).ready(function(){
-   /* display(0);
-    setInterval(displayNextImage, 5000);*/
+    display(1);
+    setInterval(displayNextImage, 5000);
     $('ul li').on('click', function(){
         if(!$(this).hasClass('active')){
             $('li').removeClass('active');
