@@ -35,5 +35,7 @@
   "last name": "прізвище",
   "phone number": "телефонний номер",
   "description": "опис",
-  "cancel": "відмінити"
+  "cancel": "відмінити",
+  "Detailed message information": "Деталізована інформація про повідомлення",
+  "First name": "First name"
 }
