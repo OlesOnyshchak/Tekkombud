@@ -4,29 +4,31 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
+<body ng-controller="NavigationController">
 
-<h2 class="offer-pagination-header">Our offers</h2>
+<h2 class="offer-pagination-header">{{'Our offers' | translate }}</h2>
 <table class="table table-striped table-hover">
     <thead>
     <tr>
-        <th ng-click="sort('id')">Id <span class="glyphicon sort-icon" ng-show="sortKey=='id'"
-                                           ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
-        </th>
-        <th ng-click="sort('name')">Name <span class="glyphicon sort-icon" ng-show="sortKey=='name'"
-                                               ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
-        </th>
-        <th ng-click="sort('description')">Description <span class="glyphicon sort-icon"
-                                                             ng-show="sortKey=='description'"
+        <th ng-click="sort('id')">{{'Id' | translate }}<span class="glyphicon sort-icon" ng-show="sortKey=='id'"
                                                              ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
         </th>
-        <th ng-click="sort('skills')">Skills <span class="glyphicon sort-icon" ng-show="sortKey=='skills'"
-                                                   ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+        <th ng-click="sort('name')">{{'Name' | translate }}<span class="glyphicon sort-icon" ng-show="sortKey=='name'"
+                                                                 ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
         </th>
-        <th ng-click="sort('salary')">Salary <span class="glyphicon sort-icon" ng-show="sortKey=='salary'"
-                                                   ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+        <th ng-click="sort('description')">{{'Description' | translate }}<span class="glyphicon sort-icon"
+                                                                               ng-show="sortKey=='description'"
+                                                                               ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
         </th>
-        <th>Manipulation</th>
+        <th ng-click="sort('skills')">{{'Skills' | translate }}<span class="glyphicon sort-icon"
+                                                                     ng-show="sortKey=='skills'"
+                                                                     ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+        </th>
+        <th ng-click="sort('salary')">{{'Salary' | translate }}<span class="glyphicon sort-icon"
+                                                                     ng-show="sortKey=='salary'"
+                                                                     ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+        </th>
+        <th>{{'Manipulation' | translate }}</th>
     </tr>
     </thead>
     <tbody>

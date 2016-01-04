@@ -33,6 +33,10 @@
             src="app/dependency/bower-components/angularUtils-pagination/dirPagination.js"></script>
     <script type="text/javascript"
             src="app/dependency/bower-components/angular-translate/angular-translate.js"></script>
+    <script type="text/javascript"
+            src="app/dependency/bower-components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script type="text/javascript"
+            src="app/dependency/bower-components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
 </head>
 <style>
     [ng\:cloak]
@@ -58,7 +62,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll">Tekkombud</a>
+            <a class="navbar-brand page-scroll">{{ 'Tekkombud' | translate }}</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -81,7 +85,7 @@
                 </li>
                 <li ng-controller="InternationalizationController" class="dropdown" dropdown on-toggle="toggled(open)">
                     <a
-                            class="dropdown-toggle" dropdown-toggle> {{ 'LANG' | translate }} <span
+                            class="dropdown-toggle" dropdown-toggle> {{ 'lang' | translate }} <span
                             class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
@@ -91,15 +95,18 @@
                 </li>
 
                 <li>
-                    <form class="navbar-form navbar-right" ng-controller="LoginController">
+                    <form class="navbar-form navbar-right" ng-controller="LoginController"
+                          ng-controller="NavigationController">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="username" ng-model="login.username">
+                            <input type="text" class="form-control" placeholder="{{'username' | translate }}"
+                                   ng-model="login.username">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="password"
+                            <input type="password" class="form-control" placeholder="{{'password' | translate }}"
                                    ng-model="login.password">
                         </div>
-                        <button type="submit" class="btn btn-default" ng-click="login()">Sign in</button>
+                        <button type="submit" class="btn btn-default" ng-click="login()">{{'Sign in' | translate }}
+                        </button>
                     </form>
                 </li>
             </ul>
