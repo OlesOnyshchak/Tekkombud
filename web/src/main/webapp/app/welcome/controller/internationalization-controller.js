@@ -1,7 +1,7 @@
 angular
     .module('app')
-    .controller('InternationalizationController', ['$scope', '$translate', '$log',
-        function ($scope, $translate, $log) {
+    .controller('InternationalizationController', ['$scope', '$translate',
+        function ($scope, $translate) {
 
             $scope.languages = [
                 {
@@ -13,7 +13,6 @@ angular
                     name: "Українська"
                 }];
             $scope.changeLanguage = function (key) {
-                console.log("okkk");
                 $translate.use(key);
             };
         }]);

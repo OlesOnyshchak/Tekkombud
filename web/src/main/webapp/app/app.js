@@ -1,5 +1,24 @@
 var module = angular.module('app', ['spring-security-csrf-token-interceptor', 'ui.router', 'ngMap', 'ui.bootstrap', 'angularUtils.directives.dirPagination', 'pascalprecht.translate']);
-module.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+module.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', function ($translateProvider, $stateProvider, $urlRouterProvider) {
+
+    $translateProvider.translations('en', {
+        'Home': 'Home',
+        'Projects': 'Projects',
+        'Offers': 'Offers',
+        'Contact': 'Contact',
+        'LANG': "en"
+    });
+
+    $translateProvider.translations('ukr', {
+        'Home': 'Домашня',
+        'Projects': 'Проекти',
+        'Offers': 'Вакансії',
+        'Contact': 'Контакти',
+        'LANG': "укр"
+    });
+
+    $translateProvider.preferredLanguage('en');
+
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
