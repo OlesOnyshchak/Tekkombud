@@ -9,7 +9,7 @@
     <form class="form-inline">
         <div class="form-group">
             <label>{{'Search' | translate }}</label>
-            <input type="text" ng-model="search" class="form-control" placeholder="Search">
+            <input type="text" ng-model="search" class="form-control" placeholder="{{'search' | translate }}">
             <button type="submit" class="btn btn-primary" ng-click="addOffer()">
                 {{'add offer' | translate }}
             </button>
@@ -55,11 +55,11 @@
             <td>{{info.skills}}</td>
             <td>{{info.salary}}</td>
             <td>
-                <a ng-click="delete(info.id)" title="Click to delete message"><i
+                <a ng-click="delete(info.id)" title="{{'Click to delete the offer' | translate }}"><i
                         class="glyphicon glyphicon-minus"></i></a>
-                <a ng-click="offerInfo(info)" title="Click to get detailed information"><i
+                <a ng-click="offerInfo(info)" title="{{'Click to get detailed offer information' | translate }}"><i
                         class="glyphicon glyphicon-info-sign"></i></a>
-                <a ng-click="update(info)" title="Click to get detailed information"><i
+                <a ng-click="update(info)" title="{{'Click to update the offer' | translate }}"><i
                         class="glyphicon glyphicon-wrench"></i></a>
             </td>
         </tr>

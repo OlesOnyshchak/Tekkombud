@@ -55,6 +55,15 @@
   "Are you sure you want to delete an offer": "Ви впевнені що хочете видалити вакансію",
   "Last name": "Прізвище",
   "Information about employee": "Інформація про кандидатів",
-  "Detailed message information": "Деталізована інформація про повідомлення",
-  "Form update": "Оновлення вакансії"
+  "Detailed message information": "Детальна інформація про повідомлення",
+  "Form update": "Редагування вакансії",
+  "Click to get detailed information": "отримати детальну інформацію про повідомлення",
+  "Click to delete the message": "видалити повідомлення",
+  "Click to delete the offer": "видалити вакансію",
+  "Click to get detailed offer information": "отримати детальну інформацію про вакансію",
+  "Click to update the offer": "відредагувати вакансію",
+  "search": "пошук",
+  "Click to send us an email": "надіслати повідомлення на електронну пошту",
+  "Click to call us": "зателефонувати нам",
+  "Click to call us on Skype": "зателефонувати на скайп"
 }

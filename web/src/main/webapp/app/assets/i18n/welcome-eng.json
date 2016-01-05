@@ -56,5 +56,14 @@
   "Last name": "Last name",
   "Information about employee": "Information about employee",
   "Detailed message information": "Detailed message information",
-  "Offer update": "Offer update"
+  "Offer update": "Offer update",
+  "Click to get detailed information": "сlick to get detailed information",
+  "Click to delete the message": "сlick to delete the message",
+  "Click to delete the offer": "сlick to delete the offer",
+  "Click to get detailed offer information": "click to get detailed offer information",
+  "Click to update the offer": "click to update the offer",
+  "search": "search",
+  "Click to send us an email": "click to send us an email",
+  "Click to call us": "click to call us",
+  "Click to call us on Skype": "click to call us on Skype"
 }
