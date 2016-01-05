@@ -8,6 +8,10 @@ angular
             $modalInstance.close();
         };
 
+        $scope.clear = function () {
+            $scope.jobInformation = {};
+        };
+
         $scope.submit = function (info) {
             SettingService.saveOffer(info).then(function () {
                 $modalInstance.close();
