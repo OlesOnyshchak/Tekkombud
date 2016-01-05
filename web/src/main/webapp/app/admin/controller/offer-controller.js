@@ -1,5 +1,6 @@
 angular.module('admin')
     .controller('OfferController', ['$scope', '$http', 'SettingService', '$modal', function ($scope, $http, SettingService, $modal) {
+        getOffersData();
 
         $scope.addOffer = function () {
             var modalInstance = $modal.open({
@@ -12,7 +13,7 @@ angular.module('admin')
                 getOffersData();
             });
         };
-        getOffersData();
+
 
         function getOffersData() {
             SettingService.getAllOffers().then(function (data) {

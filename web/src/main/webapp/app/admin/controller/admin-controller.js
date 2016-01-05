@@ -12,5 +12,11 @@ angular.module('admin')
         $scope.saveUser = function(reg) {
             SettingService.create(reg);
         };
+
+        $scope.acounts = [
+            {
+                name: "logout"
+            }];
+
     }]);
 

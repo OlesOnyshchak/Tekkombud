@@ -8,30 +8,32 @@ module.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', fun
 
     $translateProvider.preferredLanguage('eng');
     $translateProvider.useLocalStorage();
+    $translateProvider
+        .useSanitizeValueStrategy('escaped');
 
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
         .state('otherwise', {
-            url:'/',
+            url: '/',
             templateUrl: 'app/welcome/template/home.html'
         })
         .state('contact', {
-            url:'/contact',
+            url: '/contact',
             templateUrl: 'app/welcome/template/contact.html',
             controller: 'WelcomeController'
         })
         .state('home', {
-            url:'/home',
+            url: '/home',
             templateUrl: 'app/welcome/template/home.html'
         })
         .state('project', {
-            url:'/project',
+            url: '/project',
             templateUrl: 'app/welcome/template/project.html',
             controller: 'WelcomeController'
         })
         .state('offer', {
-            url:'/offer',
+            url: '/offer',
             templateUrl: 'app/welcome/template/offer.html',
             controller: 'WelcomeController'
         })

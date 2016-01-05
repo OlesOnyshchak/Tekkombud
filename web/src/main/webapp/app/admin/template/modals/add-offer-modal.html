@@ -1,14 +1,15 @@
 <form class="form-group">
 
     <div class="modal-header">
-        <h3 class="modal-title">Please fill the form?</h3>
+        <h3 class="modal-title">{{'Please fill the form' | translate }}</h3>
     </div>
     <div class="modal-body">
         <form id="contact-form">
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="job name" ng-model="jobInformation.name">
+                        <input type="text" class="form-control" placeholder="{{'job name' | translate }}"
+                               ng-model="jobInformation.name">
                     </div>
                 </div>
             </div>
@@ -16,7 +17,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <textarea type="text" class="form-control" placeholder="job description"
+                        <textarea type="text" class="form-control" placeholder="{{'job description' | translate }}"
                                   ng-model="jobInformation.description"></textarea>
                     </div>
                 </div>
@@ -25,7 +26,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="job skills"
+                        <input type="text" class="form-control" placeholder="{{'job skills' | translate }}"
                                ng-model="jobInformation.skills">
                     </div>
                 </div>
@@ -34,7 +35,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="job salary"
+                        <input type="text" class="form-control" placeholder="{{'job salary' | translate }}"
                                ng-model="jobInformation.salary">
                     </div>
                 </div>
@@ -46,15 +47,15 @@
         <div class="row">
             <div class="col-md-12">
                 <button type="submit" class="btn btn-success submit-button" ng-click="submit(jobInformation)">
-                    submit
+                    {{'submit' | translate }}
                 </button>
 
                 <button type="submit" class="btn btn-warning decline-button" ng-click="clearMessage()">
-                    clear
+                    {{'clear' | translate }}
                 </button>
 
                 <button type="submit" class="btn btn-danger decline-button" ng-click="clearMessage()">
-                    cancel
+                    {{'cancel' | translate }}
                 </button>
             </div>
 

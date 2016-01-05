@@ -19,6 +19,8 @@
     <script src="app/admin/controller/modals/info-offer-controller.js"></script>
     <script src="app/admin/controller/modals/delete-offer-modal.js"></script>
     <script src="app/admin/controller/modals/update-offer-modal-controller.js"></script>
+    <script src="app/admin/controller/internationalization-controller.js"></script>
+    <script src="app/admin/controller/navigation-controller.js"></script>
     <script src="app/admin/service/setting-service.js"></script>
 
     <script src="app/dependency/bower-components/angular-route/angular-route.js"></script>
@@ -32,6 +34,16 @@
             src="app/dependency/bower-components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script type="text/javascript"
             src="app/dependency/bower-components/angularUtils-pagination/dirPagination.js"></script>
+    <script type="text/javascript"
+            src="app/dependency/bower-components/angular-translate/angular-translate.js"></script>
+    <script type="text/javascript"
+            src="app/dependency/bower-components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script type="text/javascript"
+            src="app/dependency/bower-components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+    <script type="text/javascript"
+            src="app/dependency/bower-components/angular-cookies/angular-cookies.js"></script>
+    <script type="text/javascript"
+            src="app/dependency/bower-components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,25 +69,44 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#/">Tekkombud</a>
+                <a class="navbar-brand page-scroll">Tekkombud</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="SettingController">
                 <ul class="nav navbar-nav navbar-right">
+
                     <li class="hidden">
                         <a href="#/page-top"></a>
                     </li>
-                    <li class="">
-                        <a href="#/message"><i class="fa fa-fw fa-dashboard"></i>Messages</a>
+
+                    <li ng-class="{active: isActive('/message')}" ng-controller="NavigationController">
+                        <a class="page-scroll" ui-sref="message">{{'Messages' | translate }}</a>
                     </li>
-                    <li>
-                        <a href="#/offer"><i class="fa fa-fw fa-bar-chart-o"></i>Offer</a>
+
+                    <li ng-class="{active: isActive('/offer')}" ng-controller="NavigationController">
+                        <a class="page-scroll" ui-sref="offer">{{'Offer' | translate }}</a>
                     </li>
-                    <li>
-                        <a href="#">Account &#9662;</a>
-                        <ul class="dropdown">
-                            <li><a href="#" ng-click="logout()">logout</a></li>
+
+                    <li ng-controller="InternationalizationController" class="dropdown" dropdown
+                        on-toggle="toggled(open)">
+                        <a class="dropdown-toggle" dropdown-toggle> {{ 'lang' | translate }}
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li ng-repeat="lang in languages"><a
+                                    ng-click="changeLanguage(lang.key)">{{ lang.name }}</a></li>
+                        </ul>
+                    </li>
+
+                    <li ng-controller="InternationalizationController" class="dropdown" dropdown
+                        on-toggle="toggled(open)">
+                        <a class="dropdown-toggle" dropdown-toggle> {{ 'Account' | translate }}
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li ng-repeat="acount in acounts"><a
+                                    ng-click="logout()">{{acount.name | translate}}</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -87,15 +118,10 @@
 
     <div id="page-wrapper">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div ui-view></div>
-                </div>
-            </div>
+            <div ui-view></div>
         </div>
     </div>
 </div>
-<!-- /#wrapper -->
 
 </body>
 </html>
