@@ -1,24 +1,24 @@
 <form class="form-group">
 
     <div class="modal-header">
-        <h3 class="modal-title">Detailed message information</h3>
+        <h3 class="modal-title">{{'Detailed message information' | translate }}</h3>
     </div>
 
     <div class="modal-body">
         <form>
             <div class="col-md-offset-1">
                 <div class="row">
-                    <label>First name: </label>{{info.name}}
+                    <label>{{'First name' | translate }} : </label> {{info.name}}
                 </div>
             </div>
             <div class="col-md-offset-1">
                 <div class="row">
-                    <label class="email-modal">Email: </label>{{info.email}}
+                    <label class="email-modal">{{'Email' | translate }} : </label> {{info.email}}
                 </div>
             </div>
             <div class="col-md-offset-1">
                 <div class="row">
-                    <label>Text: </label>{{info.text}}
+                    <label>{{'Text' | translate }} : </label> {{info.text}}
                 </div>
             </div>
         </form>

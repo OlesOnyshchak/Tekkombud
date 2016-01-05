@@ -36,8 +36,6 @@
   "phone number": "phone number",
   "description": "description",
   "cancel": "cancel",
-  "Detailed message information": "Detailed message information",
-  "First name": "First name",
   "You can find tekkombud permanent location below": "You can find tekkombud permanent location below",
   "Our contacts": "Our contacts",
   "Messages": "Messages",
@@ -53,5 +51,10 @@
   "job description": "job description",
   "job name": "job name",
   "Are you sure you want to delete a message": "Are you sure you want to delete a message",
-  "Are you sure you want to delete an offer": "Are you sure you want to delete an offer"
+  "Are you sure you want to delete an offer": "Are you sure you want to delete an offer",
+  "First name": "First name",
+  "Last name": "Last name",
+  "Information about employee": "Information about employee",
+  "Detailed message information": "Detailed message information",
+  "Offer update": "Offer update"
 }

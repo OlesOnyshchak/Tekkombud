@@ -36,8 +36,7 @@
   "phone number": "телефонний номер",
   "description": "опис",
   "cancel": "відмінити",
-  "Detailed message information": "Деталізована інформація про повідомлення",
-  "First name": "First name",
+  "First name": "ім'я",
   "You can find tekkombud permanent location below": "Нижче Ви можете знайти місцезнаходження компанії 'Теккомбуд'",
   "Our contacts": "Наші контакти",
   "Messages": "Повідомлення",
@@ -53,5 +52,9 @@
   "job description": "опис",
   "job name": "назва",
   "Are you sure you want to delete a message": "Ви дійсно хочете видалити повідомлення",
-  "Are you sure you want to delete an offer": "Ви впевнені що хочете видалити вакансію"
+  "Are you sure you want to delete an offer": "Ви впевнені що хочете видалити вакансію",
+  "Last name": "Прізвище",
+  "Information about employee": "Інформація про кандидатів",
+  "Detailed message information": "Деталізована інформація про повідомлення",
+  "Form update": "Оновлення вакансії"
 }

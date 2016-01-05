@@ -1,14 +1,15 @@
 <form class="form-group">
 
     <div class="modal-header">
-        <h3 class="modal-title">Form update</h3>
+        <h3 class="modal-title">{{'Offer update' | translate }}</h3>
     </div>
     <div class="modal-body">
         <form id="contact-form">
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="job name" ng-model="info.name">
+                        <input type="text" class="form-control" placeholder="{{'job name' | translate }}"
+                               ng-model="info.name">
                     </div>
                 </div>
             </div>
@@ -16,7 +17,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <textarea type="text" class="form-control" placeholder="job description"
+                        <textarea type="text" class="form-control" placeholder="{{'job description' | translate }}"
                                   ng-model="info.description"></textarea>
                     </div>
                 </div>
@@ -25,7 +26,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="job skills"
+                        <input type="text" class="form-control" placeholder="{{'job skills' | translate }}"
                                ng-model="info.offerStatus">
                     </div>
                 </div>
@@ -34,7 +35,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="job salary"
+                        <input type="text" class="form-control" placeholder="{{'job salary' | translate }}"
                                ng-model="info.salary">
                     </div>
                 </div>
@@ -42,7 +43,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="job salary"
+                        <input type="text" class="form-control" placeholder="{{'job skills' | translate }}"
                                ng-model="info.skills">
                     </div>
                 </div>
@@ -54,11 +55,11 @@
         <div class="row">
             <div class="col-md-12">
                 <button type="submit" class="btn btn-success submit-button" ng-click="submit(info)">
-                    submit
+                    {{'submit' | translate }}
                 </button>
 
                 <button type="submit" class="btn btn-danger decline-button" ng-click="cancel()">
-                    cancel
+                    {{'cancel' | translate }}
                 </button>
             </div>
 
