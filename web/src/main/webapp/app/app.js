@@ -1,4 +1,4 @@
-var module = angular.module('app', ['spring-security-csrf-token-interceptor', 'ui.router', 'ngMap', 'ui.bootstrap', 'angularUtils.directives.dirPagination', 'pascalprecht.translate']);
+var module = angular.module('app', ['spring-security-csrf-token-interceptor', 'ui.router', 'ngMap', 'ui.bootstrap', 'angularUtils.directives.dirPagination', 'pascalprecht.translate', 'ngCookies']);
 module.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', function ($translateProvider, $stateProvider, $urlRouterProvider) {
 
     $translateProvider.useStaticFilesLoader({
@@ -7,6 +7,7 @@ module.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', fun
     });
 
     $translateProvider.preferredLanguage('eng');
+    $translateProvider.useLocalStorage();
 
     $urlRouterProvider.otherwise('/');
 
