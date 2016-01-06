@@ -18,7 +18,7 @@ import java.util.Stack;
 @Service
 public class OfferServiceImpl implements OfferService {
     @Autowired
-    CRUDRepository<Offer> crudRepository;
+    private CRUDRepository<Offer> crudRepository;
 
     @Override
     @Transactional

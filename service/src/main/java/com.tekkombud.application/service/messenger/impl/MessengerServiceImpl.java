@@ -13,7 +13,7 @@ import java.util.List;
 @Service
 public class MessengerServiceImpl implements MessengerService {
     @Autowired
-    CRUDRepository <Messenger>crudRepository;
+    private CRUDRepository<Messenger> crudRepository;
 
     @Override
     @Transactional
