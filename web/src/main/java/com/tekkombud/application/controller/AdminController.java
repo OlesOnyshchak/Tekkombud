@@ -5,6 +5,7 @@ import com.tekkombud.application.entity.Offer;
 import com.tekkombud.application.entity.util.OfferStatus;
 import com.tekkombud.application.service.messenger.MessengerService;
 import com.tekkombud.application.service.offer.OfferService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +22,8 @@ public class AdminController {
 
     @Autowired
     OfferService offerService;
+
+    private static Logger logger = Logger.getLogger(AdminController.class);
 
     @RequestMapping(value = "messages", method = RequestMethod.GET)
     public List<Messenger> getAllMessage() {

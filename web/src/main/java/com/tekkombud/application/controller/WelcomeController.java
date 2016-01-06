@@ -6,6 +6,7 @@ import com.tekkombud.application.entity.Messenger;
 import com.tekkombud.application.entity.Offer;
 import com.tekkombud.application.service.messenger.MessengerService;
 import com.tekkombud.application.service.offer.OfferService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,6 +25,8 @@ public class WelcomeController {
     @Autowired
     MessengerService messengerService;
 
+    private static Logger logger = Logger.getLogger(WelcomeController.class);
+
     @RequestMapping(value = "message", method = RequestMethod.POST)
     public void saveMessage(@RequestBody Messenger messenger) {
         messengerService.saveMessage(messenger);
@@ -31,8 +34,8 @@ public class WelcomeController {
 
     @RequestMapping(value = "add-cv-to-offer/{id}", method = RequestMethod.PUT)
     public void updateOffer(@PathVariable("id") Integer id, @RequestBody CV cv) {
-        System.out.println(id);
-        System.out.println(cv.toString());
+        logger.info(id);
+        logger.info(cv.toString());
         Offer offer = offerService.getById(Long.valueOf(id));
         System.out.println(offer.toString());
         Set<CV> cvList = offer.getCvList();
