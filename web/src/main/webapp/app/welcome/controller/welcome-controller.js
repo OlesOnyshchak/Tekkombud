@@ -3,6 +3,7 @@ angular.module('app')
         $scope.message = {};
         $scope.offerInfo = {};
         $scope.saveMessage = function (reg) {
+            console.log(reg);
             var modalInstance = $modal.open({
                 animation: true,
                 templateUrl: 'app/welcome/template/modals/confirm-message.html',
