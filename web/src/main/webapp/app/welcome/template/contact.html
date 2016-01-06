@@ -58,10 +58,10 @@
                 <div class="form-group" show-errors>
                         <textarea type="text" class="form-control" id="text" name="text"
                                   placeholder="{{'message' | translate }}"
-                                  ng-model="message.text" ng-pattern="USERNAME_REGEX" required></textarea>
+                                  ng-model="message.text" ng-pattern="TEXT_REGEX" required></textarea>
                     <p class="help-block" ng-if="message.text.$error.pattern">
                         <span class="glyphicon glyphicon-exclamation-sign"></span>
-                        {{'TEXT_ERROR' | translate }}пкпккппк
+                        {{'TEXT_ERROR' | translate }}
                     </p>
                     <p class="help-block" ng-if="message.text.$error.required">
                         <span class="glyphicon glyphicon-exclamation-sign"></span>
