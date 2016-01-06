@@ -65,5 +65,8 @@
   "search": "search",
   "Click to send us an email": "click to send us an email",
   "Click to call us": "click to call us",
-  "Click to call us on Skype": "click to call us on Skype"
+  "Click to call us on Skype": "click to call us on Skype",
+  "TEXT_ERROR": "text must not contain numbers or non-alphabetic characters",
+  "EMAIL_ERROR": "email must contain @ sign",
+  "REQUIRED": "This field is required"
 }

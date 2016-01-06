@@ -55,3 +55,8 @@
 h3 {
     text-align: center;
 }
+
+.form-group .has-success .glyphicon-ok-sign {
+    display: block;
+    color: green;
+}

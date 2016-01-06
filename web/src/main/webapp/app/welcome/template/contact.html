@@ -24,36 +24,48 @@
         <div class="col-md-6">
             <div class="col-md-6">
                 <div class="form-group" show-errors>
-                    <input type="text" class="form-control" name="name" placeholder="{{'name' | translate }} "
-                           ng-model="message.name" required>
+                    <input type="text" class="form-control" ng-pattern="NAME_REGEX" name="name"
+                           placeholder="{{'name' | translate }} "
+                           ng-model="message.name" popover-trigger="focus" popover-placement="right" required>
 
                     <p class="help-block" ng-if="message.name.$error.pattern">
-                        <span class="glyphicon glyphicon-exclamation-sign"></span> {{'name error' |
-                        translate }}
+                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                        {{'NAME_ERROR' | translate}}
                     </p>
-
+                    <p class="help-block" ng-if="message.name.$error.required">
+                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                        {{'REQUIRED' | translate}}
+                    </p>
                 </div>
             </div>
 
             <div class="col-md-6">
-                <div class="form-group" show-errors>
+                <div class="form-group" show-errors="{ showSuccess: true }">
                     <input type="text" class="form-control" name="email" placeholder="{{'email' | translate }}"
                            ng-model="message.email" ng-pattern="EMAIL_REGEX" required>
 
                     <p class="help-block" ng-if="message.email.$error.pattern">
-                        <span class="glyphicon glyphicon-exclamation-sign"></span> {{'email error' |
-                        translate }}
+                        {{'EMAIL_ERROR' |translate }}
+                    </p>
+                    <p class="help-block" ng-if="message.email.$error.required">
+                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                        {{'REQUIRED' | translate}}
                     </p>
                 </div>
             </div>
 
             <div class="col-md-12">
                 <div class="form-group" show-errors>
-                        <textarea type="text" class="form-control" name="text" placeholder="{{'message' | translate }}"
+                        <textarea type="text" class="form-control" id="text" name="text"
+                                  placeholder="{{'message' | translate }}"
                                   ng-model="message.text" ng-pattern="USERNAME_REGEX" required></textarea>
                     <p class="help-block" ng-if="message.text.$error.pattern">
-                        <span class="glyphicon glyphicon-exclamation-sign"></span> {{'text error' |
-                        translate }}
+                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                        {{'TEXT_ERROR' | translate }}пкпккппк
+                    </p>
+                    <p class="help-block" ng-if="message.text.$error.required">
+                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                        {{'REQUIRED' | translate}}
                     </p>
                 </div>
             </div>
