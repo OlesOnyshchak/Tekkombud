@@ -6,10 +6,11 @@ var module = angular.module('app', [
     'angularUtils.directives.dirPagination',
     'pascalprecht.translate',
     'ngCookies',
-    'ngMessages'
+    'ngMessages',
+    'ui.bootstrap.showErrors'
 ]);
-module.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', function ($translateProvider, $stateProvider, $urlRouterProvider) {
-
+module.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', 'showErrorsConfigProvider', function ($translateProvider, $stateProvider, $urlRouterProvider, showErrorsConfigProvider) {
+    showErrorsConfigProvider.showSuccess(true);
     $translateProvider.useStaticFilesLoader({
         prefix: 'app/assets/i18n/welcome-',
         suffix: '.json'

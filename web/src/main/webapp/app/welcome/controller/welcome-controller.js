@@ -1,30 +1,40 @@
 angular.module('app')
     .controller('WelcomeController', ['$scope', 'WelcomeService', '$modal', function ($scope, WelcomeService, $modal) {
+
         $scope.message = {};
         $scope.offerInfo = {};
+
         $scope.saveMessage = function (reg) {
             console.log(reg);
-            var modalInstance = $modal.open({
-                animation: true,
-                templateUrl: 'app/welcome/template/modals/confirm-message.html',
-                controller: 'ModalWelcomeController',
-                size: 'md',
-                resolve: {
-                    response: function () {
-                        return reg;
-                    }
-                }
-            });
+            $scope.$broadcast('show-errors-check-validity');
 
-            modalInstance.result.then(function (result) {
-                if (result === "submit"){
-                    $scope.message = {};
-                }
-            })
+            if ($scope.contactMessage.$valid) {
+                var modalInstance = $modal.open({
+                    animation: true,
+                    templateUrl: 'app/welcome/template/modals/confirm-message.html',
+                    controller: 'ModalWelcomeController',
+                    size: 'md',
+                    resolve: {
+                        response: function () {
+                            return reg;
+                        }
+                    }
+                });
+
+                modalInstance.result.then(function (result) {
+                    if (result === "submit") {
+                        $scope.message = {};
+                    }
+                })
+            }
         };
 
+        $scope.EMAIL_REGEX = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+
+
         $scope.clearMessage = function () {
-            $scope.message = {};
+            $scope.$broadcast('show-errors-reset');
+            $scope.message = null;
         };
 
         function getOffers() {
@@ -32,7 +42,7 @@ angular.module('app')
                 $scope.offerInfo = data;
             });
 
-            $scope.sort = function(keyname){
+            $scope.sort = function (keyname) {
                 $scope.sortKey = keyname;   //set the sortKey to the param passed
                 $scope.reverse = !$scope.reverse; //if true make it false and vice versa
             }

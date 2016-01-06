@@ -19,32 +19,47 @@
 </div>
 
 <div class="row">
-    <form name="contact-message" id="contact-form">
+    <form name="contactMessage" novalidate ng-submit="saveMessage(message)">
 
         <div class="col-md-6">
             <div class="col-md-6">
-                <div class="form-group">
+                <div class="form-group" show-errors>
                     <input type="text" class="form-control" name="name" placeholder="{{'name' | translate }} "
                            ng-model="message.name" required>
+
+                    <p class="help-block" ng-if="message.name.$error.pattern">
+                        <span class="glyphicon glyphicon-exclamation-sign"></span> {{'name error' |
+                        translate }}
+                    </p>
+
                 </div>
             </div>
 
             <div class="col-md-6">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="{{'email' | translate }}"
-                           ng-model="message.email" required>
+                <div class="form-group" show-errors>
+                    <input type="text" class="form-control" name="email" placeholder="{{'email' | translate }}"
+                           ng-model="message.email" ng-pattern="EMAIL_REGEX" required>
+
+                    <p class="help-block" ng-if="message.email.$error.pattern">
+                        <span class="glyphicon glyphicon-exclamation-sign"></span> {{'email error' |
+                        translate }}
+                    </p>
                 </div>
             </div>
 
             <div class="col-md-12">
-                <div class="form-group">
-                        <textarea type="text" class="form-control" placeholder="{{'message' | translate }}"
-                                  ng-model="message.text" required></textarea>
+                <div class="form-group" show-errors>
+                        <textarea type="text" class="form-control" name="text" placeholder="{{'message' | translate }}"
+                                  ng-model="message.text" ng-pattern="USERNAME_REGEX" required></textarea>
+                    <p class="help-block" ng-if="message.text.$error.pattern">
+                        <span class="glyphicon glyphicon-exclamation-sign"></span> {{'text error' |
+                        translate }}
+                    </p>
                 </div>
             </div>
 
             <div class="col-md-12">
-                <button type="submit" class="btn btn-success submit-button" ng-click="saveMessage(message)">{{'submit' |
+                <button type="submit" class="btn btn-success submit-button">{{'submit' |
                     translate }}
                 </button>
                 <button type="submit" class="btn btn-warning decline-button" ng-click="clearMessage()">{{'clear' |
