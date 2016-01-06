@@ -9,28 +9,28 @@
             <div class="row">
                 <div class="col-md-12 form-group">
                     <input type="text" class="form-control" placeholder="{{'first name' | translate }}"
-                           ng-model="employeeInfo.firstName"
+                           ng-model="employeeInformation.firstName"
                            required>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 form-group">
                     <input type="text" class="form-control" placeholder="{{'last name' | translate }}"
-                           ng-model="employeeInfo.lastName"
+                           ng-model="employeeInformation.lastName"
                            required>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 form-group">
                     <input type="text" class="form-control" placeholder="{{'phone number' | translate }}"
-                           ng-model="employerInfo.phoneNumber"
+                           ng-model="employeeInformation.phoneNumber"
                            required>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 form-group">
                     <input type="text" class="form-control" placeholder="{{'email' | translate }}"
-                           ng-model="employeeInfo.email"
+                           ng-model="employeeInformation.email"
                            required>
                 </div>
             </div>
@@ -38,7 +38,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <textarea type="text" class="form-control" placeholder="description"
-                                  ng-model="employeeInfo.description"></textarea>
+                                  ng-model="employeeInformation.description"></textarea>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
         <button class="btn btn-danger pull-right" type="button" ng-click="cancel()">
             {{'cancel' | translate }}
         </button>
-        <button class="btn btn-success pull-right submit" type="submit" ng-click="submit(employeeInfo)">
+        <button class="btn btn-success pull-right submit" type="submit" ng-click="submit(employeeInformation)">
             {{'submit' | translate }}
         </button>
     </div>

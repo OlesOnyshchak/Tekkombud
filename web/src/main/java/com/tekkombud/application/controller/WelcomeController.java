@@ -32,6 +32,7 @@ public class WelcomeController {
     @RequestMapping(value = "add-cv-to-offer/{id}", method = RequestMethod.PUT)
     public void updateOffer(@PathVariable("id") Integer id, @RequestBody CV cv) {
         System.out.println(id);
+        System.out.println(cv.toString());
         Offer offer = offerService.getById(Long.valueOf(id));
         System.out.println(offer.toString());
         Set<CV> cvList = offer.getCvList();

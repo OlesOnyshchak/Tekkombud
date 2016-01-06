@@ -4,14 +4,15 @@ angular
         $scope.id = response;
         const ADD_CV_TO_OFFER = "add-cv-to-offer/" + $scope.id;
 
-        $scope.employeeInfo = {};
+        $scope.employeeInformation = {};
 
         $scope.cancel = function () {
             $modalInstance.close();
         };
 
-        $scope.submit = function (employeeInfo) {
-            WelcomeService.update(employeeInfo, ADD_CV_TO_OFFER);
+        $scope.submit = function (employeeInformation) {
+            console.log(employeeInformation);
+            WelcomeService.update(employeeInformation, ADD_CV_TO_OFFER);
             $modalInstance.close();
         };
     }]);
