@@ -7,7 +7,6 @@ angular.module('app')
         $scope.saveMessage = function (reg) {
             console.log(reg);
             $scope.$broadcast('show-errors-check-validity');
-
             if ($scope.contactMessage.$valid) {
                 var modalInstance = $modal.open({
                     animation: true,
