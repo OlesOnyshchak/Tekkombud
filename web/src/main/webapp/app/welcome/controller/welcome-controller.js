@@ -30,8 +30,8 @@ angular.module('app')
         };
 
         $scope.EMAIL_REGEX = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
-        $scope.NAME_REGEX = /\w/;
-        $scope.TEXT_REGEX = /\w/;
+        $scope.NAME_REGEX = /^[a-zA-Z а-яА-Я]*$/;
+        $scope.TEXT_REGEX = /^[a-zA-Z?!"',. -()а-яА-Я]*$/;
 
         $scope.clearMessage = function () {
             $scope.$broadcast('show-errors-reset');
