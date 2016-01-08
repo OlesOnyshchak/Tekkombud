@@ -9,10 +9,16 @@ angular
         $scope.cancel = function () {
             $modalInstance.close();
         };
+        $scope.EMAIL_REGEX = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+        $scope.NAME_REGEX = /^[a-zA-Z а-яА-Я]*$/;
+        $scope.TEXT_REGEX = /^[a-zA-Z?!"',. -()а-яА-Я]*$/;
+        $scope.PHONE_REGEX = /^[0-9]+$/;
 
         $scope.submit = function (employeeInformation) {
-            console.log(employeeInformation);
-            WelcomeService.update(employeeInformation, ADD_CV_TO_OFFER);
-            $modalInstance.close();
+            $scope.$broadcast('show-errors-check-validity');
+            if ($scope.cv.$valid) {
+                WelcomeService.update(employeeInformation, ADD_CV_TO_OFFER);
+                $modalInstance.close();
+            }
         };
     }]);

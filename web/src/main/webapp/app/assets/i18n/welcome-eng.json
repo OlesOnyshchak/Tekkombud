@@ -68,6 +68,7 @@
   "Click to call us on Skype": "click to call us on Skype",
   "TEXT_ERROR": "text must not contain numbers or non-alphabetic characters",
   "EMAIL_ERROR": "email must contain @ sign",
-  "NAME_ERROR": "This field must contain only alphabetic characters",
-  "REQUIRED": "This field is required"
+  "NAME_ERROR": "this field must contain only alphabetic characters",
+  "REQUIRED": "this field is required",
+  "PHONE_ERROR": "Phone number must contain only digits"
 }

@@ -6,7 +6,6 @@ var module = angular.module('app', [
     'angularUtils.directives.dirPagination',
     'pascalprecht.translate',
     'ngCookies',
-    'ngMessages',
     'ui.bootstrap.showErrors'
 ]);
 module.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', 'showErrorsConfigProvider', function ($translateProvider, $stateProvider, $urlRouterProvider, showErrorsConfigProvider) {

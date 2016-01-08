@@ -8,7 +8,16 @@ angular
             };
 
             $scope.submit = function () {
-                WelcomeService.saveMessage($scope.info);
-                $modalInstance.close("submit");
+                console.log("arrived");
+                $scope.$broadcast('show-errors-check-validity');
+                if (form.$valid) {
+                    WelcomeService.saveMessage($scope.info);
+                    $modalInstance.close("submit");
+                }
             };
+
+        $scope.EMAIL_REGEX = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+        $scope.NAME_REGEX = /^[a-zA-Z а-яА-Я]*$/;
+        $scope.TEXT_REGEX = /^[a-zA-Z?!"',. -()а-яА-Я]*$/;
+
         }]);

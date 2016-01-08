@@ -1,35 +1,66 @@
-<form class="form-group" ng-controller="NavigationController">
+<form class="form-group" ng-controller="NavigationController" name="contactMessage" novalidate ng-submit="submit()">
 
     <div class="modal-header">
         <h3 class="modal-title">{{'Message modal title' | translate }}</h3>
     </div>
 
     <div class="modal-body">
-        <form name="messageForm" novalidate>
             <div class="col-md-6 form-group">
                 <div class="row">
-                    <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" placeholder="{{'name' | translate }}"
-                               ng-model="info.name" required>
+                    <div class="col-md-12 form-group" show-errors>
+                        <input type="text" class="form-control" name="name"
+                               placeholder="{{'name' | translate }}"
+                               ng-model="info.name" ng-pattern="NAME_REGEX" required>
+
+                        <p class="help-block" ng-if="contactMessage.name.$error.pattern">
+                            <span class="glyphicon glyphicon-exclamation-sign"></span>
+                            {{'NAME_ERROR' | translate}}
+                        </p>
+
+                        <p class="help-block" ng-if="contactMessage.name.$error.required">
+                            <span class="glyphicon glyphicon-exclamation-sign"></span>
+                            {{'REQUIRED' | translate}}
+                        </p>
+
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 form-group">
-                        <input type="text" class="form-control" placeholder="{{'email' | translate }}"
-                               ng-model="info.email" required>
+                    <div class="col-md-12 form-group" show-errors>
+                        <input type="text" class="form-control" name="email"
+                               placeholder="{{'email' | translate }}"
+                               ng-model="info.email" ng-pattern="EMAIL_REGEX" required>
+
+                        <p class="help-block" ng-if="contactMessage.email.$error.pattern">
+                            {{'EMAIL_ERROR' |translate }}
+                        </p>
+
+                        <p class="help-block" ng-if="contactMessage.email.$error.required">
+                            <span class="glyphicon glyphicon-exclamation-sign"></span>
+                            {{'REQUIRED' | translate}}
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 form-group">
-                <textarea type="text" class="form-control" placeholder="{{'message' | translate }}" ng-model="info.text"
-                          required></textarea>
+        <div class="col-md-6 form-group" show-errors>
+                <textarea type="text" class="form-control"
+                          placeholder="{{'message' | translate }}"
+                          name="text" ng-model="info.text"
+                          required ng-pattern="TEXT_REGEX"></textarea>
+
+            <p class="help-block" ng-if="contactMessage.text.$error.pattern">
+                <span class="glyphicon glyphicon-exclamation-sign"></span>
+                {{'TEXT_ERROR' | translate }}
+            </p>
+
+            <p class="help-block" ng-if="contactMessage.text.$error.required">
+                <span class="glyphicon glyphicon-exclamation-sign"></span>
+                {{'REQUIRED' | translate}}
+            </p>
             </div>
             <div class="row"></div>
-        </form>
     </div>
-
     <div class="modal-footer form-group">
-        <button class="btn btn-success pull-left" type="submit" ng-click="submit()">
+        <button class="btn btn-success pull-left" type="submit">
             {{'yes' | translate }}
         </button>
 

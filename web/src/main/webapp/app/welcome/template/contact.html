@@ -19,14 +19,14 @@
 </div>
 
 <div class="row">
-    <form name="contactMessage" id="contactMessage" novalidate ng-submit="saveMessage(message)">
+    <form name="contactMessage" novalidate ng-submit="saveMessage(message)">
 
         <div class="col-md-6">
             <div class="col-md-6">
                 <div class="form-group" show-errors>
                     <input type="text" class="form-control" name="name"
                            placeholder="{{'name' | translate }} "
-                           ng-model="message.name" ng-pattern="NAME_REGEX" required>
+                           ng-model="message.name" required ng-pattern="NAME_REGEX">
 
                     <p class="help-block" ng-if="contactMessage.name.$error.pattern">
                         <span class="glyphicon glyphicon-exclamation-sign"></span>
@@ -40,14 +40,14 @@
             </div>
 
             <div class="col-md-6">
-                <div class="form-group" show-errors="{ showSuccess: true }">
+                <div class="form-group" show-errors>
                     <input type="text" class="form-control" name="email" placeholder="{{'email' | translate }}"
                            ng-model="message.email" ng-pattern="EMAIL_REGEX" required>
 
-                    <p class="help-block" ng-if="message.email.$error.pattern">
+                    <p class="help-block" ng-if="contactMessage.email.$error.pattern">
                         {{'EMAIL_ERROR' |translate }}
                     </p>
-                    <p class="help-block" ng-if="message.email.$error.required">
+                    <p class="help-block" ng-if="contactMessage.email.$error.required">
                         <span class="glyphicon glyphicon-exclamation-sign"></span>
                         {{'REQUIRED' | translate}}
                     </p>
@@ -59,11 +59,11 @@
                         <textarea type="text" class="form-control" id="text" name="text"
                                   placeholder="{{'message' | translate }}"
                                   ng-model="message.text" ng-pattern="TEXT_REGEX" required></textarea>
-                    <p class="help-block" ng-if="message.text.$error.pattern">
+                    <p class="help-block" ng-if="contactMessage.text.$error.pattern">
                         <span class="glyphicon glyphicon-exclamation-sign"></span>
                         {{'TEXT_ERROR' | translate }}
                     </p>
-                    <p class="help-block" ng-if="message.text.$error.required">
+                    <p class="help-block" ng-if="contactMessage.text.$error.required">
                         <span class="glyphicon glyphicon-exclamation-sign"></span>
                         {{'REQUIRED' | translate}}
                     </p>
