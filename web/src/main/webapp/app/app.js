@@ -8,9 +8,15 @@ var module = angular.module('app', [
     'ngCookies',
     'ui.bootstrap.showErrors'
 ]);
-module.config(['$translateProvider', '$stateProvider', '$urlRouterProvider', 'showErrorsConfigProvider', function ($translateProvider, $stateProvider, $urlRouterProvider, showErrorsConfigProvider) {
+module.config(['$translateProvider',
+    '$stateProvider',
+    '$urlRouterProvider',
+    'showErrorsConfigProvider',
+    function ($translateProvider, $stateProvider, $urlRouterProvider, showErrorsConfigProvider) {
+
     showErrorsConfigProvider.showSuccess(true);
-    $translateProvider.useStaticFilesLoader({
+
+        $translateProvider.useStaticFilesLoader({
         prefix: 'app/assets/i18n/welcome-',
         suffix: '.json'
     });
