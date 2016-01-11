@@ -47,7 +47,7 @@ module.config(['$translateProvider',
         .state('project', {
             url: '/project',
             templateUrl: 'app/welcome/template/project.html',
-            controller: 'WelcomeController'
+            controller: 'ProjectController'
         })
         .state('offer', {
             url: '/offer',
