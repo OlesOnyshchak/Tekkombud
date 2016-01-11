@@ -46,8 +46,14 @@ public class WelcomeController {
     @RequestMapping(value = "offers-welcome", method = RequestMethod.GET)
     public List<OfferDTO> getAllOffer() {
         List<Offer> offerList = offerService.getAllOffer();
-        List<OfferDTO> offerDTOList = new ArrayList<OfferDTO>();
+        List<Offer> activeAndRespondedOfferList = new ArrayList<Offer>();
         for (Offer offer : offerList) {
+            if (!offer.getOfferStatus().equals(OfferStatus.CLOSED)) {
+                activeAndRespondedOfferList.add(offer);
+            }
+        }
+        List<OfferDTO> offerDTOList = new ArrayList<OfferDTO>();
+        for (Offer offer : activeAndRespondedOfferList) {
             offerDTOList.add(
                     new OfferDTO(
                             offer.getId(),
