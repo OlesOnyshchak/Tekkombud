@@ -40,7 +40,6 @@ public class OfferServiceImpl implements OfferService {
     @Override
     @Transactional
     public void update(Offer offer) {
-        offer.setOfferStatus(OfferStatus.RESPONDED);
         crudRepository.setObjectClass(Offer.class);
         crudRepository.update(offer);
     }

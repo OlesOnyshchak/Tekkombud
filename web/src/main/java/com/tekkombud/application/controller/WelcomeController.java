@@ -4,6 +4,7 @@ import com.tekkombud.application.controller.dto.OfferDTO;
 import com.tekkombud.application.entity.CV;
 import com.tekkombud.application.entity.Messenger;
 import com.tekkombud.application.entity.Offer;
+import com.tekkombud.application.entity.util.OfferStatus;
 import com.tekkombud.application.service.messenger.MessengerService;
 import com.tekkombud.application.service.offer.OfferService;
 import org.apache.log4j.Logger;
@@ -34,12 +35,11 @@ public class WelcomeController {
 
     @RequestMapping(value = "add-cv-to-offer/{id}", method = RequestMethod.PUT)
     public void updateOffer(@PathVariable("id") Integer id, @RequestBody CV cv) {
-        logger.info(id);
-        logger.info(cv.toString());
+
         Offer offer = offerService.getById(Long.valueOf(id));
-        System.out.println(offer.toString());
         Set<CV> cvList = offer.getCvList();
         cvList.add(cv);
+        offer.setOfferStatus(OfferStatus.RESPONDED);
         offerService.update(offer);
     }
 

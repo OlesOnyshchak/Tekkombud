@@ -12,8 +12,11 @@ angular
         $scope.TEXT_REGEX = /^[a-zA-Z а-яА-Я,.:?!"'єі0-9-]*$/;
 
         $scope.submit = function (info) {
-            SettingService.saveOffer(info).then(function () {
-                $modalInstance.close();
-            });
-        };
+            $scope.$broadcast('show-errors-check-validity');
+            if ($scope.addOffer.$valid) {
+                SettingService.saveOffer(info).then(function () {
+                    $modalInstance.close();
+                });
+            }
+        }
     }]);

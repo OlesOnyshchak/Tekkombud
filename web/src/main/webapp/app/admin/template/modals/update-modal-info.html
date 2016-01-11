@@ -4,51 +4,59 @@
         <h3 class="modal-title">{{'Offer update' | translate }}</h3>
     </div>
     <div class="modal-body">
-        <form id="contact-form">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="{{'job name' | translate }}"
-                               ng-model="info.name">
-                    </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="{{'job name' | translate }}"
+                           ng-model="info.name">
                 </div>
             </div>
+        </div>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
                         <textarea type="text" class="form-control" placeholder="{{'job description' | translate }}"
                                   ng-model="info.description"></textarea>
-                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="{{'job skills' | translate }}"
-                               ng-model="info.offerStatus">
-                    </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <select ng-model="orderModel" ng-change="changeStatus(orderModel)"
+                            ng-options="option.name for option in orderOptions"></select>
+                    </select>
                 </div>
             </div>
+        </div>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="{{'job salary' | translate }}"
-                               ng-model="info.salary">
-                    </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="{{'job skills' | translate }}"
+                           ng-model="info.offerStatus">
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="{{'job skills' | translate }}"
-                               ng-model="info.skills">
-                    </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="{{'job salary' | translate }}"
+                           ng-model="info.salary">
                 </div>
             </div>
-        </form>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="{{'job skills' | translate }}"
+                           ng-model="info.skills">
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="modal-footer form-group">
@@ -62,7 +70,6 @@
                     {{'cancel' | translate }}
                 </button>
             </div>
-
         </div>
     </div>
 </form>
