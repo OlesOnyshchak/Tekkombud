@@ -31,7 +31,8 @@ module.config(['$translateProvider',
     $stateProvider
         .state('otherwise', {
             url: '/home',
-            templateUrl: 'app/welcome/template/home.html'
+            templateUrl: 'app/welcome/template/home.html',
+            controller: 'HomeController'
         })
         .state('contact', {
             url: '/contact',
