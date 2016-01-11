@@ -8,9 +8,8 @@ angular
             $modalInstance.close();
         };
 
-        $scope.clear = function () {
-            $scope.jobInformation = {};
-        };
+        $scope.NAME_REGEX = /^[a-zA-Z а-яА-Я]*$/;
+        $scope.TEXT_REGEX = /^[a-zA-Z а-яА-Я,.:?!"'єі0-9-]*$/;
 
         $scope.submit = function (info) {
             SettingService.saveOffer(info).then(function () {

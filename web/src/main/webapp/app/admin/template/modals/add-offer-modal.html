@@ -1,64 +1,96 @@
-<form class="form-group">
+<form class="form-group" name="addOffer" novalidate ng-submit="submit(jobInformation)">
 
     <div class="modal-header">
         <h3 class="modal-title">{{'Please fill the form' | translate }}</h3>
     </div>
     <div class="modal-body">
-        <form id="contact-form">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="{{'job name' | translate }}"
-                               ng-model="jobInformation.name">
-                    </div>
-                </div>
-            </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group" show-errors>
+                    <input type="text" class="form-control" name="name" placeholder="{{'job name' | translate }}"
+                           ng-model="jobInformation.name" ng-pattern="NAME_REGEX" required>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <textarea type="text" class="form-control" placeholder="{{'job description' | translate }}"
-                                  ng-model="jobInformation.description"></textarea>
-                    </div>
-                </div>
-            </div>
+                    <p class="help-block" ng-if="addOffer.name.$error.pattern">
+                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                        {{'NAME_ERROR' | translate}}
+                    </p>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="{{'job skills' | translate }}"
-                               ng-model="jobInformation.skills">
-                    </div>
+                    <p class="help-block" ng-if="addOffer.name.$error.required">
+                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                        {{'REQUIRED' | translate}}
+                    </p>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="{{'job salary' | translate }}"
-                               ng-model="jobInformation.salary">
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-    <div class="modal-footer form-group">
+        </div>
 
         <div class="row">
             <div class="col-md-12">
-                <button type="submit" class="btn btn-success submit-button" ng-click="submit(jobInformation)">
-                    {{'submit' | translate }}
-                </button>
+                <div class="form-group" show-errors>
+                        <textarea type="text" class="form-control" placeholder="{{'job description' | translate }}"
+                                  name="text" ng-model="jobInformation.description"
+                                  ng-pattern="TEXT_REGEX" required></textarea>
 
-                <button type="submit" class="btn btn-warning decline-button" ng-click="clear()">
-                    {{'clear' | translate }}
+                    <p class="help-block" ng-if="addOffer.text.$error.pattern">
+                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                        {{'TEXT_ERROR' | translate }}
+                    </p>
+
+                    <p class="help-block" ng-if="addOffer.text.$error.required">
+                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                        {{'REQUIRED' | translate}}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group" show-errors>
+                    <input type="text" class="form-control" placeholder="{{'job skills' | translate }}"
+                           name="skills" ng-model="jobInformation.skills" ng-pattern="TEXT_REGEX" required>
+
+                    <p class="help-block" ng-if="addOffer.skills.$error.pattern">
+                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                        {{'TEXT_ERROR' | translate }}
+                    </p>
+
+                    <p class="help-block" ng-if="addOffer.skills.$error.required">
+                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                        {{'REQUIRED' | translate}}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group" show-errors>
+                    <input type="text" class="form-control" placeholder="{{'job salary' | translate }}"
+                           ng-model="jobInformation.salary" name="salary" ng-pattern="TEXT_REGEX" required>
+                    <p class="help-block" ng-if="addOffer.salary.$error.pattern">
+                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                        {{'TEXT_ERROR' | translate }}
+                    </p>
+
+                    <p class="help-block" ng-if="addOffer.salary.$error.required">
+                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                        {{'REQUIRED' | translate}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer form-group">
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-success submit-button">
+                    {{'submit' | translate }}
                 </button>
 
                 <button type="submit" class="btn btn-danger decline-button" ng-click="cancel()">
                     {{'cancel' | translate }}
                 </button>
             </div>
-
         </div>
     </div>
 </form>

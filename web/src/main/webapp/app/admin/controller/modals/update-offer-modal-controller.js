@@ -4,8 +4,10 @@ angular
 
         $scope.info = response;
 
+        $scope.NAME_REGEX = /^[a-zA-Z а-яА-Я]*$/;
+        $scope.TEXT_REGEX = /^[a-zA-Z?!"',. -()а-яА-Я]*$/;
+
         $scope.submit = function (info) {
-            console.log(info);
             SettingService.updateOffer(info).then(function () {
                 $modalInstance.close();
             });
