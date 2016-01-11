@@ -26,11 +26,11 @@ module.config(['$translateProvider',
     $translateProvider
         .useSanitizeValueStrategy('escaped');
 
-    $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/home');
 
     $stateProvider
         .state('otherwise', {
-            url: '/',
+            url: '/home',
             templateUrl: 'app/welcome/template/home.html'
         })
         .state('contact', {
@@ -40,7 +40,8 @@ module.config(['$translateProvider',
         })
         .state('home', {
             url: '/home',
-            templateUrl: 'app/welcome/template/home.html'
+            templateUrl: 'app/welcome/template/home.html',
+            controller: 'HomeController'
         })
         .state('project', {
             url: '/project',

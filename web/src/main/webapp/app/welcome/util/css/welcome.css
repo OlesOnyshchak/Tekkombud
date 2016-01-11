@@ -9,6 +9,7 @@
 }
 .image{
     width: 100%;
+    height: 100%;
 }
 
 .carousel-indicators li {
@@ -60,3 +61,12 @@ h3 {
     display: block;
     color: green;
 }
+
+.textalign {
+    text-align: center;
+}
+
+.copyright {
+    color: #0f0f0f
+}
+

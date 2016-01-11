@@ -22,7 +22,6 @@ angular.module('app')
 
             var response = $http(request);
             response.success(function (data) {
-                console.log("ok");
                 var path = redirectByRole(data);
                 $scope.login.password = null;
 
