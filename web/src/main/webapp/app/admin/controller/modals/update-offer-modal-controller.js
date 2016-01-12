@@ -5,13 +5,16 @@ angular
 
         $scope.info = response;
         $scope.NAME_REGEX = /^[a-zA-Z а-яА-Я]*$/;
-        $scope.TEXT_REGEX = /^[a-zA-Z?!"',. -()а-яА-Я]*$/;
+        $scope.TEXT_REGEX = /^[a-zA-Z?!"',. -()а-яА-Я0-9]*$/;
 
         $scope.submit = function (info) {
             console.log(info);
-            SettingService.updateOffer(info).then(function () {
-                $modalInstance.close();
-            });
+            $scope.$broadcast('show-errors-check-validity');
+            if ($scope.updateModal.$valid) {
+                SettingService.updateOffer(info).then(function () {
+                    $modalInstance.close();
+                });
+            }
         };
 
         $scope.orderOptions = [
