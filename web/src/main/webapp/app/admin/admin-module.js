@@ -26,12 +26,13 @@ admin.config(['$translateProvider',
             .useSanitizeValueStrategy('escaped');
         $translateProvider.preferredLanguage('eng');
 
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/message');
 
         $stateProvider
             .state('otherwise', {
-                url: '/',
-                templateUrl: 'app/admin/index.html'
+                url: '/message',
+                templateUrl: 'app/admin/template/message.html',
+                controller: 'MessageController'
             })
             .state('message', {
                 url: '/message',
