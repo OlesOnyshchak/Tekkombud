@@ -77,6 +77,14 @@
   "fourth building": "Особняк — великий, часто багато декорований окремо стоячий приватний будинок, іноді палацового типу в якому живе одна сім'я. На відміну від заміської вілли, особняк розрахований на постійне проживання. ",
   "Interval, in milliseconds:": "Інтервал, в мілісекундах:",
   "Enter a negative number to stop the interval.": "Введіть негативне значення для зупинки",
-  "How to Build a House": "Як збудувати будинок",
-  "mainparagraph": "mainparagraph"
+  "mainparagraph": "mainparagraph",
+  "How to build a house":"Як збудувати будинок",
+  "main-paragraph":"Будівництво будинку мрії може бути одним з найбільш захоплюючих видом діяльності. Мати можливість бути присутнім на кожному етапі будівництва та приймати рішення ..... ",
+  "Part 1 of 7: Finding a Location":"Частина 1 з 7: Пошук місця",
+  "Part 2 of 7: Designing Your Home":"Частина 2 з 7: Проектування будинку",
+  "Part 3 of 7: Getting the Necessary Permits":"Частина 3 з 7: Отримання необхідних дозволів",
+  "Part 4 of 7: Breaking Ground":"Частина 4 з 7: Влаштування фундамента",
+  "Part 5 of 7: Building the Walls and Roof":"Частина 5 з 7: Будівництво стін та даху",
+  "Part 6 of 7: Starting on the Interior":"Частина 6 з 7: Влаштування інтерєру",
+  "Part 7 of 7: Installing the Essentials":"Частина 7 з 7: Встановлення необхідних приладів"
 }
