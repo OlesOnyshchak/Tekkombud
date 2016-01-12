@@ -27,7 +27,11 @@ angular.module('app')
                     "Summary": "fourth building",
                     "Path": "app/welcome/util/photo/4.jpg"
                 }
-            ]
+            ];
+        $scope.intervalDescription = {
+            "name": "Interval, in milliseconds:",
+            "hint": "Enter a negative number to stop the interval."
+        };
 
     }]);
 

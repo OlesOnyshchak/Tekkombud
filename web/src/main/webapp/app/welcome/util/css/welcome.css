@@ -78,3 +78,9 @@ h3 {
     display: none;
 }
 
+.btn-mini {
+    background-color: #e7e7e7;
+    color: #0f0f0f;
+    border-color: #e7e7e7;
+}
+

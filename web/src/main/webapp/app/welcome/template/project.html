@@ -22,13 +22,13 @@
             <ul>
                 <li class="select" data-ng-repeat="slide in slides">
                     <button class="btn btn-mini"
-                            data-ng-class="{'btn-info': !slide.active, 'btn-success': slide.active}"
+                            data-ng-class="{'btn-info': !slide.active, 'page-scroll ng-binding': slide.active}"
                             data-ng-disabled="slide.active" data-ng-click="slide.active = true"> {{slide.Title}}
                     </button>
                 </li>
-                Interval, in milliseconds:
+                {{intervalDescription.name | translate}}
                 <input type="number" data-ng-model="myInterval">
-                Enter a negative number to stop the interval.
+                {{intervalDescription.hint | translate }}
             </ul>
         </div>
     </div>
