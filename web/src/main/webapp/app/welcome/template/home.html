@@ -4,21 +4,26 @@
     <meta charset="UTF-8">
     <title>Tekkombud</title>
 </head>
-
 <body>
-<div class="row">
-    <div class="image">
-        <img ng-src="{{slides.imgName}}"/>
-    </div>
+<h3 class="textalign">{{"How to Build a House"}}</h3>
+<div class="col-md-offset-3 col-md-6">
+    <p>Building your dream home can be one of the most exciting and rewarding projects you can undertake. Getting the opportunity to plan out each step of the process and make the decisions about your building project is a big responsibility, and can be overwhelming for even the most experienced do-it-yourselfers. Taking the scope of the project into account before you get started can help make the process go a lot more smoothly. Learn the proper ways to find the right location, design your home, acquire the correct permits, and breaking ground. See Step 1 to learn how to get started building your own house.</p>
 </div>
+<div>
+    <carousel interval="myInterval" style="margin-top: 7%">
+        <slide data-ng-repeat="slide in slides" active="slide.active">
+            <div class="col-md-12 textalign">
+                <h4>{{slide.Title | translate}}</h4>
+            </div>
+            <div class="col-md-offset-3 col-md-6">
+                <img data-ng-src="{{slide.Path}}">
+            </div>
+            <div class="col-md-offset-3 col-md-6">
+                <p>{{slide.Summary | translate}}</p>
+            </div>
+        </slide>
 
-
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators ">
-        <li ng-class="{'active':selected == 'tab1'}" ng-click="select('tab1')"><a href="" class=""></a></li>
-        <li ng-class="{'active':selected == 'tab2'}" ng-click="select('tab2')"><a href="" class=""></a></li>
-        <li ng-class="{'active':selected == 'tab3'}" ng-click="select('tab3')"><a href="" class=""></a></li>
-    </ol>
+    </carousel>
 </div>
 
 
