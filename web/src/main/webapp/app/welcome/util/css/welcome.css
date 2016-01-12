@@ -70,3 +70,11 @@ h3 {
     color: #0f0f0f
 }
 
+.select {
+    display: inline;
+}
+
+.carousel-indicators {
+    display: none;
+}
+
