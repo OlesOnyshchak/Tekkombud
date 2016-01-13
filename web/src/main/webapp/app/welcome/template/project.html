@@ -9,16 +9,16 @@
     <div>
         <carousel interval="myInterval">
             <slide data-ng-repeat="slide in slides" active="slide.active">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <img data-ng-src="{{slide.Path}}">
                 </div>
-                <div class="col-md-6" style="margin-top: 2% ">
+                <div class="col-md-offset-3 col-md-6" style="margin-top: 2% ">
                     <p>{{slide.Summary | translate}}</p>
                 </div>
             </slide>
 
         </carousel>
-        <div class="col-md-offset-2 col-md-8" style="margin-top: 2%">
+        <div class="col-md-offset-4 col-md-4" style="margin-top: 2%">
             <ul>
                 <li class="select" data-ng-repeat="slide in slides">
                     <button class="btn btn-mini"
@@ -26,9 +26,10 @@
                             data-ng-disabled="slide.active" data-ng-click="slide.active = true"> {{slide.Title}}
                     </button>
                 </li>
-                {{intervalDescription.name | translate}}
-                <input type="number" data-ng-model="myInterval">
-                {{intervalDescription.hint | translate }}
+                <div class="row" style="margin-top: 2%">
+                    {{intervalDescription.name | translate}} <input type="number" data-ng-model="myInterval"> 
+                </div>
+
             </ul>
         </div>
     </div>

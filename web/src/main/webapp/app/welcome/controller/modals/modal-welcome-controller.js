@@ -10,9 +10,12 @@ angular
             $scope.submit = function () {
                 console.log("arrived");
                 $scope.$broadcast('show-errors-check-validity');
-                if (form.$valid) {
-                    WelcomeService.saveMessage($scope.info);
-                    $modalInstance.close("submit");
+                if ($scope.contactMessage.$valid) {
+                    WelcomeService.saveMessage($scope.info).then(function () {
+                        $scope.$broadcast('show-errors-reset');
+                        $scope.info = null;
+                        $modalInstance.close("submit");
+                    });
                 }
             };
 

@@ -5,7 +5,6 @@ angular.module('app')
         $scope.offerInfo = {};
 
         $scope.saveMessage = function (reg) {
-            console.log(reg);
             $scope.$broadcast('show-errors-check-validity');
             if ($scope.contactMessage.$valid) {
                 var modalInstance = $modal.open({
@@ -21,9 +20,8 @@ angular.module('app')
                 });
 
                 modalInstance.result.then(function (result) {
-                    if (result === "submit") {
-                        $scope.message = {};
-                    }
+                    $scope.$broadcast('show-errors-reset');
+                    $scope.message = {};
                 })
             }
         };

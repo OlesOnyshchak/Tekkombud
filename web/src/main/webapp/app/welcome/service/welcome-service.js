@@ -7,8 +7,8 @@ angular.module('app')
                 });
             },
             saveMessage: function (reg) {
-                return $http.post('message', reg).success(function (data) {
-                    console.log("ok");
+                return $http.post('message', reg).then(function (response) {
+                    return response.data;
                 });
             },
             getAllOffers: function () {
