@@ -8,7 +8,6 @@ angular
             };
 
             $scope.submit = function () {
-                console.log("arrived");
                 $scope.$broadcast('show-errors-check-validity');
                 if ($scope.contactMessage.$valid) {
                     WelcomeService.saveMessage($scope.info).then(function () {
