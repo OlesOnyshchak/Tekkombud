@@ -53,5 +53,6 @@ module.config(['$translateProvider',
             url: '/offer',
             templateUrl: 'app/welcome/template/offer.html',
             controller: 'WelcomeController'
-        })
+        });
+
 }]);

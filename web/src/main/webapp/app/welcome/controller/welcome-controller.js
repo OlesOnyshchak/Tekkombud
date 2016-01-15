@@ -4,6 +4,12 @@ angular.module('app')
         $scope.message = {};
         $scope.offerInfo = {};
 
+        $scope.call = function(){
+            WelcomeService.call().then(function (data) {
+                console.log(data);
+            });
+        };
+
         $scope.saveMessage = function (reg) {
             $scope.$broadcast('show-errors-check-validity');
             if ($scope.contactMessage.$valid) {

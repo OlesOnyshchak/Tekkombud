@@ -20,6 +20,11 @@ angular.module('app')
                 return $http.put(url, reg).success(function (data) {
                     console.log("ok");
                 });
+            },
+            call:function(){
+                return $http.get('http://146.148.26.96:8080/offers-welcome').then(function (response) {
+                    return response.data;
+                });
             }
         }
     }]);
