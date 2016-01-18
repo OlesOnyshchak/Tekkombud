@@ -84,3 +84,22 @@ h3 {
     border-color: #e7e7e7;
 }
 
+.carousel-control{
+    background-color: white;
+}
+.glyphicon-chevron-left{
+    color: #0f0f0f;
+}
+.glyphicon-chevron-right{
+    color: #0f0f0f;!important;
+}
+.carousel-inner{
+    background-color: white;
+}
+.login{
+    width: 5px;
+}
+.password{
+    width: 5px;
+}
+

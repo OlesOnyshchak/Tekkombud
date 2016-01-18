@@ -95,11 +95,11 @@
                     <form class="navbar-form navbar-right" ng-controller="LoginController"
                           ng-controller="NavigationController">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="{{'username' | translate }}"
+                            <input type="text" class="form-control login" placeholder="{{'username' | translate }}"
                                    ng-model="login.username">
                         </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" placeholder="{{'password' | translate }}"
+                        <div class="form-group ">
+                            <input type="password" class="form-control password" placeholder="{{'password' | translate }}"
                                    ng-model="login.password">
                         </div>
                         <button type="submit" class="btn btn-default" ng-click="login()">{{'Sign in' | translate }}
