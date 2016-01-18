@@ -129,25 +129,30 @@ p{
     background-color: white;
 }
 .glyphicon-chevron-left{
-    color: #0f0f0f;
+
 }
-.glyphicon-chevron-right{
-    color: #0f0f0f;!important;
-}
+
 .carousel-inner{
     background: none;
 }
-.carousel-control{
-    background: none;
-    display: none;
+
+.carousel-control.left {
+    background-image: none;
+    color: grey;
+    padding-left: 10%;
+}
+.carousel-control.right {
+    background-image: none;
+    color: grey;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
+    margin-left: 20ex;
 }
 
-.login{
-    width: 5px;
+.carousel-control .glyphicon-chevron-right, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-next {
+    margin-right: 20ex;
 }
-.password{
-    width: 5px;
-}
+
 .carousel-image{
     margin-top: 2%;
     margin-bottom: 2%;
