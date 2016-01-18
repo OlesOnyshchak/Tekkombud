@@ -58,7 +58,7 @@
 <body>
 
 <!-- Navigation -->
-<nav ng-show ="isLoaded" class="navbar navbar-default navbar-fixed-top navbar-shrink">
+<nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
     <div class="container">
         <div class="navbar-header page-scroll">
             <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -115,9 +115,11 @@
 
 <div id="page-wrapper">
     <div class="container-fluid">
-        <div ng-show ="isLoaded" ui-view></div>
+        <div ui-view></div>
     </div>
 </div>
+
+
 <script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 <script src='app/dependency/bower-components/bootstrap/dist/js/bootstrap.min.js'></script>
 </body>

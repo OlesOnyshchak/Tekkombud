@@ -6,23 +6,24 @@
 </head>
 <body>
 <h3 class="textalign">{{'How to build a house' | translate}}</h3>
+
 <div class="col-md-offset-3 col-md-6">
-    <p>{{'main-paragraph'| translate}}</p>
+    <p class="main-paragraph">{{'main-paragraph'| translate}}</p>
 </div>
+
 <div>
     <carousel interval="myInterval" style="margin-top: 7%" class = "welcome-carousel">
         <slide data-ng-repeat="slide in slides" active="slide.active">
-            <div class="col-md-12 textalign">
+            <div class="col-md-12 textalign carousel-title">
                 <h4>{{slide.Title | translate}}</h4>
             </div>
-            <div class="col-md-offset-3 col-md-6">
-                <img data-ng-src="{{slide.Path}}">
+            <div class="col-md-offset-3 col-md-6 carousel-image">
+                <img style="align-items: center" data-ng-src="{{slide.Path}}">
             </div>
             <div class="col-md-offset-3 col-md-6">
                 <p>{{slide.Summary | translate}}</p>
             </div>
         </slide>
-
     </carousel>
 </div>
 

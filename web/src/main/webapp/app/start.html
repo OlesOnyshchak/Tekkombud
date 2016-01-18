@@ -49,7 +49,7 @@
 <body>
 
 <!-- Navigation -->
-<nav ng-show = "isLoaded" class="navbar navbar-default navbar-fixed-top navbar-shrink">
+<nav  class="navbar navbar-default navbar-fixed-top navbar-shrink">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
@@ -82,6 +82,7 @@
                 <li ng-class="{active: isActive('/offer')}" ng-controller="NavigationController">
                     <a class="page-scroll" href="#/offer">{{ 'Offers' | translate }}</a>
                 </li>
+
                 <li ng-class="{active: isActive('/contact')}" ng-controller="NavigationController">
                     <a class="page-scroll" href="#/contact">{{ 'Contact' | translate }}</a>
                 </li>
@@ -99,17 +100,19 @@
                 <li>
                     <form class="navbar-form navbar-right" ng-controller="LoginController"
                           ng-controller="NavigationController">
+
                         <div class="form-group">
                             <input type="text" class="form-control login" placeholder="{{'username' | translate }}"
                                    ng-model="login.username">
                         </div>
+
                         <div class="form-group ">
                             <input type="password" class="form-control password"
                                    placeholder="{{'password' | translate }}"
                                    ng-model="login.password">
                         </div>
-                        <button type="submit" class="btn btn-default" ng-click="login()">{{'Sign in' | translate }}
-                        </button>
+
+                        <button type="submit" class="btn btn-default" ng-click="login()">{{'Sign in' | translate }}</button>
                     </form>
                 </li>
             </ul>
@@ -124,6 +127,9 @@
         <div ui-view></div>
     </div>
 </div>
+<!--<p>
+    <img src="app/welcome/util/gif/1.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+</p>-->
 
 <nav class="navbar navbar-default navbar-fixed-bottom textalign">
     <ul class="nav">

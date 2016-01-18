@@ -1,5 +1,7 @@
 angular.module('app')
     .controller('WelcomeController', ['$scope', 'WelcomeService', '$modal', function ($scope, WelcomeService, $modal) {
+        $scope.loading = true;
+
         $scope.message = {};
         $scope.offerInfo = {};
 
@@ -80,4 +82,5 @@ angular.module('app')
                 }
             });
         };
+        $scope.loading = false;
     }]);

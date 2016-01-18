@@ -91,6 +91,7 @@ h3 {
 }
 p{
     text-indent: 5%;
+    text-align: justify;
 }
 
 .form-group .has-success .glyphicon-ok-sign {
@@ -130,12 +131,24 @@ p{
     color: #0f0f0f;!important;
 }
 .carousel-inner{
-    background-color: white;
+    background: none;
 }
+.carousel-control{
+    background: none;
+    display: none;
+}
+
 .login{
     width: 5px;
 }
 .password{
     width: 5px;
+}
+.carousel-image{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.main-paragraph{
+    margin-bottom: 2%;
 }
 
