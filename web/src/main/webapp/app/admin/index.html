@@ -58,9 +58,8 @@
 <body>
 
 <!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
+<nav ng-show ="isLoaded" class="navbar navbar-default navbar-fixed-top navbar-shrink">
     <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
             <button type="button" class="navbar-toggle" data-toggle="collapse"
                     data-target="#bs-example-navbar-collapse-1">
@@ -73,7 +72,7 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="SettingController">
             <ul class="nav navbar-nav navbar-right">
                 <li class="hidden">
                     <a href="#/page-top"></a>
@@ -111,19 +110,15 @@
                 </li>
             </ul>
         </div>
-        <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container-fluid -->
 </nav>
 
 <div id="page-wrapper">
     <div class="container-fluid">
-        <div ui-view></div>
+        <div ng-show ="isLoaded" ui-view></div>
     </div>
 </div>
-
 <script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 <script src='app/dependency/bower-components/bootstrap/dist/js/bootstrap.min.js'></script>
-
 </body>
 </html>

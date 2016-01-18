@@ -1,5 +1,6 @@
 angular.module('admin')
     .controller('SettingController', ['$scope', '$http','SettingService', function ($scope, $http, SettingService) {
+        $scope.isLoaded = false;
         $scope.logout = function () {
             $http({
                 method: 'POST',
@@ -17,6 +18,6 @@ angular.module('admin')
             {
                 name: "logout"
             }];
-
+        $scope.isLoaded = true;
     }]);
 

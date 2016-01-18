@@ -13,14 +13,12 @@ module.config(['$translateProvider',
     '$urlRouterProvider',
     'showErrorsConfigProvider',
     function ($translateProvider, $stateProvider, $urlRouterProvider, showErrorsConfigProvider) {
-
     showErrorsConfigProvider.showSuccess(true);
 
         $translateProvider.useStaticFilesLoader({
         prefix: 'app/assets/i18n/welcome-',
         suffix: '.json'
     });
-
     $translateProvider.preferredLanguage('eng');
     $translateProvider.useLocalStorage();
     $translateProvider
@@ -54,5 +52,4 @@ module.config(['$translateProvider',
             templateUrl: 'app/welcome/template/offer.html',
             controller: 'WelcomeController'
         });
-
 }]);
