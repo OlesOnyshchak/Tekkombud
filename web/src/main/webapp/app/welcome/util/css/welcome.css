@@ -89,7 +89,11 @@
 h3 {
     text-align: center;
 }
-p{
+.main-paragraph  {
+    text-indent: 5%;
+    text-align: justify;
+}
+.summary{
     text-indent: 5%;
     text-align: justify;
 }
@@ -127,9 +131,6 @@ p{
 
 .carousel-control{
     background-color: white;
-}
-.glyphicon-chevron-left{
-
 }
 
 .carousel-inner{
