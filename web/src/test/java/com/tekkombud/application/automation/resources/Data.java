@@ -7,6 +7,7 @@ public class Data {
     private static WebDriver webDriver;
     public static final String USERNAME_LOGIN = "oless";
     public static final String USERNAME_PASSWORD = "oless";
+    public static final String WRONG_PASSWORD_LOGIN="oles";
 
     public static WebDriver getWebDriver()
     {
