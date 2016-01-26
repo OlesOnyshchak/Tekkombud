@@ -3,6 +3,7 @@ package com.tekkombud.application.service.user;
 import com.tekkombud.application.dao.CRUDRepository;
 import com.tekkombud.application.entity.User;
 import com.tekkombud.application.entity.util.Status;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
 import org.springframework.security.core.GrantedAuthority;
@@ -21,6 +22,7 @@ import java.util.List;
 @Service
 public class SecurityUserDetailsService extends JdbcDaoImpl {
 
+    private static Logger logger = Logger.getLogger(SecurityUserDetailsService.class);
     public static final String DEF_USERS_BY_USERNAME_QUERY = "select password from user where username = '?'";
     public static final String DEF_AUTHORITIES_BY_USERNAME_QUERY = "select username, status as authority where username = '?'";
 
@@ -47,20 +49,19 @@ public class SecurityUserDetailsService extends JdbcDaoImpl {
 
         if (user == null) {
             String message = "Username not found" + username;
-            System.out.println(message);
+            logger.info(message);
             throw new UsernameNotFoundException(message);
         }
 
-        System.out.println("Found user in database: " + user);
-        System.out.println(user.getPassword());
-        System.out.println(username);
+        logger.info("Found user in database: " + user);
+        logger.info(user.getPassword());
+        logger.info(username);
 
         List<GrantedAuthority> authorities = new ArrayList<>();
         Status userRoles = user.getStatus();
-        System.out.println(userRoles.name());
+        logger.info(userRoles.name());
 
         authorities.add(new SimpleGrantedAuthority(userRoles.name()));
-
 
         return new org.springframework.security.core.userdetails.User(username, user.getPassword(), authorities);
     }

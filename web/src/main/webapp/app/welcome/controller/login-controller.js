@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('LoginController', ['$scope', '$http', function ($scope, $http) {
+    .controller('LoginController', ['$scope', '$http','$modal', function ($scope, $http,$modal) {
         $scope.login = function () {
 
             $scope.incorrectStyle = false;
@@ -31,6 +31,12 @@ angular.module('app')
                     $scope.loginCorrect = true;
                     $scope.incorrectStyle = true;
                     $scope.incorrectStylePlaceholder = true;
+
+                    var modalInstance = $modal.open({
+                        animation: true,
+                        templateUrl: 'app/welcome/template/modals/error/login.html',
+                        size: 'md'
+                    });
                 }
             });
             response.error(function (data) {
