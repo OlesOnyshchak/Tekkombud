@@ -1,11 +1,8 @@
-package com.tekkombud.application.config;
+package com.tekkombud.test.config;
 
-import com.tekkombud.application.dao.CRUDRepository;
+import com.tekkombud.application.config.PersistenceConfig;
 import com.tekkombud.application.dao.impl.CRUDRepositoryImpl;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.*;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 
 import javax.persistence.EntityManager;
@@ -13,7 +10,7 @@ import javax.persistence.EntityManager;
 import static org.mockito.Mockito.mock;
 
 @Configuration
-@ComponentScan(basePackages = "com.tekkombud.application")
+@ComponentScan(basePackages = "com.tekkombud.test")
 public class ServiceMockConfig
 {
     @Bean
@@ -29,13 +26,6 @@ public class ServiceMockConfig
     }
 
     @Bean
-    public CRUDRepository entityRepositoryMock()
-    {
-        return mock(CRUDRepository.class);
-    }
-
-    @Bean
-    @Primary
     public CRUDRepositoryImpl baseRepositoryMock()
     {
         return mock(CRUDRepositoryImpl.class);

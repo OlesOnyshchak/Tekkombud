@@ -5,9 +5,12 @@ import com.tekkombud.application.entity.Offer;
 import com.tekkombud.application.entity.util.OfferStatus;
 import com.tekkombud.application.service.messenger.MessengerService;
 import com.tekkombud.application.service.offer.OfferService;
+import com.tekkombud.application.service.user.SecurityUserDetailsService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
